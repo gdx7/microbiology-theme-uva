@@ -1,65 +1,69 @@
 import Image from "next/image";
+import { researchGroups } from "@/data/researchGroups";
+import NewsCarousel from "./components/NewsCarousel";
 
 export default function Home() {
+  const featured = researchGroups.slice(0, 3);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="hero-wrap">
+      <section className="hero">
+        <div className="container">
+          <p className="section-kicker">Swammerdam Institute for Life Sciences (SILS) · University of Amsterdam</p>
+          <h1>Microbiology Theme at SILS — embedded in UvA’s life sciences community</h1>
+          <p>
+            We investigate microbes from genes to communities and translate insights to health, industry, and the
+            environment—within SILS at UvA, and connected to Amsterdam-wide initiatives.
+          </p>
+          <div style={{ display:"flex", gap:".75rem", marginTop:"1rem", flexWrap:"wrap" }}>
+            <a className="btn btn-primary" href="/research-groups">Explore research groups</a>
+            <a className="btn btn-ghost" href="/about">About the theme</a>
+          </div>
+        </div>
+      </section>
+
+      {/* News carousel (images rotate every few seconds) */}
+      <section className="section" style={{ background:"#fff", borderTop:"1px solid var(--line)", borderBottom:"1px solid var(--line)" }}>
+        <div className="container">
+          <p className="section-kicker">News & Publications</p>
+          <NewsCarousel />
+        </div>
+      </section>
+
+      {/* Research highlights (Broad-style “Programs & Platforms” feel) */}
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title">Research highlights</h2>
+          <div className="grid">
+            {featured.map((g) => (
+              <article key={g.slug} className="card">
+                <Image src={`/images/groups/${g.slug}.jpg`} alt={`${g.name} image`} width={640} height={360}
+                  style={{ width:"100%", height:"auto", borderRadius:10, border:"1px solid var(--line)" }} />
+                <h3 style={{ marginTop: ".5rem" }}>{g.name}</h3>
+                <p style={{ color:"var(--muted)" }}>{g.shortDescription}</p>
+                <a href={`/research-groups/${g.slug}`} className="btn btn-ghost" style={{ marginTop: ".4rem" }}>
+                  View group →
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Collaborations (AMEC / RPAs from UvA page) */}
+      <section className="section" style={{ background:"#fff", borderTop:"1px solid var(--line)" }}>
+        <div className="container">
+          <p className="section-kicker">Networks & Collaborations</p>
+          <div className="logo-strip">
+            <Image src="/logos/amec-logo.png" alt="Amsterdam Microbiome Expertise Center" width={120} height={36} />
+            <Image src="/logos/uva-rpa-pmh.png" alt="UvA Research Priority Area: Personal Microbiome Health" width={140} height={36} />
+            <Image src="/logos/uva-rpa-systems-biology.png" alt="UvA Faculty Research Priority: Systems Biology" width={160} height={36} />
+          </div>
+          <p className="lead" style={{ marginTop: ".6rem" }}>
+            Microbiology at UvA connects with AMEC and Research Priority Areas in Amsterdam. {/* UvA theme page summary */}
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }
