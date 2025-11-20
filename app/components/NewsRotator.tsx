@@ -1,89 +1,124 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { slides } from "@/data/news";
+
+type Slide = {
+  title: string;
+  description: string;
+  tag?: string;
+  link?: string;
+};
+
+const slides: Slide[] = [
+  {
+    title: "Personal Microbiome Health",
+    description:
+      "Microbiology groups at SILS contribute to the Research Priority Area on Personal Microbiome Health, connecting fundamental microbiology to human health.",
+    tag: "Research Priority Area",
+    link: "https://sils.uva.nl",
+  },
+  {
+    title: "Amsterdam Microbiome Expertise Center (AMEC)",
+    description:
+      "The theme is closely linked to AMEC, which integrates microbiome research across Amsterdam’s academic and clinical partners.",
+    tag: "AMEC",
+    link: "https://www.amsterdamumc.org" /* placeholder – adjust if needed */,
+  },
+  {
+    title: "AMSA & AMEC seminar series",
+    description:
+      "Microbiology researchers are active in seminar series that bring together microbiologists, systems biologists and clinicians in Amsterdam.",
+    tag: "Seminars",
+  },
+  {
+    title: "From molecules to systems",
+    description:
+      "Research spans from molecular mechanisms in single cells to complex microbial communities in food, health and the environment.",
+    tag: "Research focus",
+  },
+];
 
 export default function NewsRotator() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (slides.length < 2) return;
     const id = setInterval(() => {
-      setIndex((i) => (i + 1) % slides.length);
-    }, 6000);
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 7000); // change slide every 7s
     return () => clearInterval(id);
   }, []);
 
-  if (!slides.length) return null;
-  const slide = slides[index];
+  const current = slides[index];
 
   return (
-    <div className="news-rotator animate-fade-in">
-      <div style={{ position: "relative" }}>
-        <Image
-          src={slide.image}
-          alt={slide.alt}
-          width={1280}
-          height={720}
-          style={{ width: "100%", height: "auto", display: "block" }}
-          priority
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: "auto 0 0",
-            padding: "0.7rem 1rem",
-            background:
-              "linear-gradient(180deg, rgba(248,250,252,0) 0%, rgba(15,23,42,0.35) 90%)",
-            color: "#f9fafb",
-          }}
-        >
+    <div className="news-rotator">
+      <div style={{ padding: "1rem 1.2rem" }}>
+        {current.tag && (
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              gap: 12,
-              alignItems: "flex-end",
+              fontSize: "0.7rem",
+              textTransform: "uppercase",
+              letterSpacing: "0.14em",
+              marginBottom: "0.3rem",
+              color: "#64748b",
             }}
           >
-            <div>
-              <div
-                style={{
-                  textTransform: "uppercase",
-                  letterSpacing: "0.14em",
-                  fontSize: "0.7rem",
-                  opacity: 0.85,
-                  marginBottom: 2,
-                }}
-              >
-                Highlight {index + 1}/{slides.length}
-              </div>
-              <strong style={{ display: "block", fontSize: "1.02rem" }}>
-                {slide.title}
-              </strong>
-              <p
-                style={{
-                  margin: 0,
-                  marginTop: 4,
-                  fontSize: "0.86rem",
-                  opacity: 0.95,
-                }}
-              >
-                {slide.summary}
-              </p>
-            </div>
-            <a
-              href={slide.href}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary"
-              style={{ fontSize: "0.8rem" }}
-            >
-              Read more
-            </a>
+            {current.tag}
           </div>
-        </div>
+        )}
+        <h3
+          style={{
+            margin: "0 0 0.35rem",
+            fontSize: "1.05rem",
+          }}
+        >
+          {current.title}
+        </h3>
+        <p
+          style={{
+            margin: 0,
+            fontSize: "0.9rem",
+            color: "#64748b",
+          }}
+        >
+          {current.description}
+        </p>
+        {current.link && (
+          <p
+            style={{
+              margin: "0.6rem 0 0",
+              fontSize: "0.87rem",
+            }}
+          >
+            <a href={current.link} target="_blank" rel="noreferrer">
+              Learn more →
+            </a>
+          </p>
+        )}
+      </div>
+
+      {/* small dot indicators at the bottom-right */}
+      <div
+        style={{
+          display: "flex",
+          gap: "0.35rem",
+          justifyContent: "flex-end",
+          padding: "0.6rem 0.9rem",
+        }}
+      >
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            style={{
+              width: 6,
+              height: 6,
+              borderRadius: "999px",
+              background: i === index ? "#2563eb" : "#cbd5f5",
+              opacity: i === index ? 1 : 0.6,
+              transition: "background 0.2s ease, opacity 0.2s ease",
+            }}
+          />
+        ))}
       </div>
     </div>
   );
