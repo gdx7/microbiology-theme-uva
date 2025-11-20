@@ -1,36 +1,37 @@
 // data/news.ts
 
 export type Slide = {
-  image: string;
-  alt: string;
   title: string;
-  summary: string;
-  href: string;
+  description: string;
+  tag?: string;
+  link?: string;
 };
 
 export const slides: Slide[] = [
   {
-    image: "/images/news/news-01.jpg",
-    alt: "Stylised microbiology theme illustration",
-    title: "Microbiology Theme at SILS",
-    summary:
-      "The Microbiology theme studies microbial mechanisms, host–microbe interactions and applications that benefit health, industry and the environment.",
-    href: "https://sils.uva.nl/research/collaboration-initiatives/microbiologie/microbiology.html", // 
+    title: "Personal Microbiome Health",
+    description:
+      "Microbiology groups at SILS contribute to the Research Priority Area on Personal Microbiome Health, connecting fundamental microbiology to human health.",
+    tag: "Research Priority Area",
+    link: "https://sils.uva.nl",
   },
   {
-    image: "/images/news/news-02.jpg",
-    alt: "Conceptual microbiome and host image",
-    title: "Microbiology & the human microbiome",
-    summary:
-      "Researchers investigate how intestinal microbiomes and hosts interact over the life course, and how microbial consortia can be engineered for health.",
-    href: "https://sils.uva.nl/research/collaboration-initiatives/microbiologie/microbiology.html", // 
-  },
-  {
-    image: "/images/news/news-03.jpg",
-    alt: "Amsterdam Microbiome Expertise Center visual",
     title: "Amsterdam Microbiome Expertise Center (AMEC)",
-    summary:
-      "An Amsterdam-wide initiative that connects microbiome researchers at UvA, VU, Amsterdam UMC and ACTA through AMEC and AMSA seminars.",
-    href: "https://sils.uva.nl/content/research-groups/amsterdam-microbiome-expertise-center/amsterdam-microbiome-expertise-center.html", // 
+    description:
+      "The theme is closely linked to AMEC, which integrates microbiome research across Amsterdam’s academic and clinical partners.",
+    tag: "AMEC",
+    link: "https://www.amsterdamumc.org",
+  },
+  {
+    title: "AMSA & AMEC seminar series",
+    description:
+      "Microbiology researchers are active in seminar series that bring together microbiologists, systems biologists and clinicians in Amsterdam.",
+    tag: "Seminars",
+  },
+  {
+    title: "From molecules to systems",
+    description:
+      "Research spans from molecular mechanisms in single cells to complex microbial communities in food, health and the environment.",
+    tag: "Research focus",
   },
 ];
