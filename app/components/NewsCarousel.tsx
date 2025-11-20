@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { newsItems } from "@/data/news";
 
-export default function NewsCarousel() {
+//export default function NewsCarousel() {
   const [i, setI] = useState(0);
 
   useEffect(() => {

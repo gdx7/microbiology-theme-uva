@@ -1,7 +1,7 @@
 // data/news.ts
 
 export type Slide = {
-  image: string; // /images/news/placeholder-name.jpg
+  image: string;
   alt: string;
   title: string;
   summary: string;
@@ -11,23 +11,26 @@ export type Slide = {
 export const slides: Slide[] = [
   {
     image: "/images/news/news-01.jpg",
-    alt: "Microscopy-style background for microbiome–host research",
-    title: "Microbiome–host research highlighted",
-    summary: "Theme-wide work on microbiome–host interactions and microbial communities across life stages.",
-    href: "https://sils.uva.nl/research/collaboration-initiatives/microbiologie/microbiology.html",
+    alt: "Stylised microbiology theme illustration",
+    title: "Microbiology Theme at SILS",
+    summary:
+      "The Microbiology theme studies microbial mechanisms, host–microbe interactions and applications that benefit health, industry and the environment.",
+    href: "https://sils.uva.nl/research/collaboration-initiatives/microbiologie/microbiology.html", // 
   },
   {
     image: "/images/news/news-02.jpg",
-    alt: "Abstract visual representing a recent publication",
-    title: "Recent publications from the Microbiology theme",
-    summary: "New papers from Microbiology groups at SILS; this link can point to a curated list later.",
-    href: "https://sils.uva.nl/research/collaboration-initiatives/microbiologie/microbiology.html",
+    alt: "Conceptual microbiome and host image",
+    title: "Microbiology & the human microbiome",
+    summary:
+      "Researchers investigate how intestinal microbiomes and hosts interact over the life course, and how microbial consortia can be engineered for health.",
+    href: "https://sils.uva.nl/research/collaboration-initiatives/microbiologie/microbiology.html", // 
   },
   {
     image: "/images/news/news-03.jpg",
-    alt: "Stylised seminar audience for AMSA events",
-    title: "Amsterdam Microbiology SeminArs (AMSA)",
-    summary: "Seminars and community events around microbiology in Amsterdam.",
-    href: "https://sils.uva.nl/research/collaboration-initiatives/microbiologie/microbiology.html",
+    alt: "Amsterdam Microbiome Expertise Center visual",
+    title: "Amsterdam Microbiome Expertise Center (AMEC)",
+    summary:
+      "An Amsterdam-wide initiative that connects microbiome researchers at UvA, VU, Amsterdam UMC and ACTA through AMEC and AMSA seminars.",
+    href: "https://sils.uva.nl/content/research-groups/amsterdam-microbiome-expertise-center/amsterdam-microbiome-expertise-center.html", // 
   },
 ];
