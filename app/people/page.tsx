@@ -12,7 +12,9 @@ export default function PeoplePage() {
       group: g.name,
       role: g.role || "Principal Investigator",
       email: g.contactEmail,
-    }));
+    }))
+    // optional: sort alphabetically by name
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <section className="section">
@@ -26,14 +28,36 @@ export default function PeoplePage() {
           biomolecular mass spectrometry.
         </p>
 
-        <div className="people-list" style={{ marginTop: "1.4rem" }}>
+        {/* 3-column card grid on desktop, 1–2 cols on smaller screens via .people-grid in globals.css */}
+        <div className="grid people-grid" style={{ marginTop: "1.4rem" }}>
           {pis.map((pi, idx) => (
-            <article key={`${pi.name}-${idx}`} className="card people-card">
+            <article key={`${pi.name}-${idx}`} className="card">
               <h3>{pi.name}</h3>
-              <small>{pi.role}</small>
-              <p style={{ marginTop: "0.4rem" }}>{pi.group}</p>
+              <p
+                style={{
+                  marginTop: "0.15rem",
+                  fontSize: "0.86rem",
+                  color: "#64748b",
+                }}
+              >
+                {pi.role}
+              </p>
+              <p
+                style={{
+                  marginTop: "0.45rem",
+                  fontSize: "0.9rem",
+                }}
+              >
+                {pi.group}
+              </p>
               {pi.email && (
-                <p style={{ marginTop: "0.3rem", fontSize: "0.9rem" }}>
+                <p
+                  style={{
+                    marginTop: "0.4rem",
+                    fontSize: "0.86rem",
+                    wordBreak: "break-word",
+                  }}
+                >
                   <a href={`mailto:${pi.email}`}>{pi.email}</a>
                 </p>
               )}

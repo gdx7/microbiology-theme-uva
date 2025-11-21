@@ -14,10 +14,9 @@ export default function ResearchGroupsPage() {
         <h1 className="section-title">Research areas and groups</h1>
         <p className="lead">
           The Microbiology theme consists of multiple research groups organised
-          into four research areas. Each group has its own focus and
-          expertise, ranging from microbial food safety and microbiomes to
-          bacterial physiology, microbiome engineering and biomolecular mass
-          spectrometry.
+          into research areas, covering microbial food safety and microbiomes,
+          bacterial physiology and cell biology, microbiome engineering and
+          biomolecular mass spectrometry.
         </p>
 
         {areas.map((area: any) => {
@@ -28,7 +27,11 @@ export default function ResearchGroupsPage() {
           if (!areaGroups.length) return null;
 
           return (
-            <div key={area.slug} style={{ marginTop: "1.8rem" }}>
+            <div
+              key={area.slug}
+              id={area.slug}
+              style={{ marginTop: "1.8rem" }}
+            >
               <h2 className="section-title" style={{ fontSize: "1.25rem" }}>
                 {area.title}
               </h2>
@@ -36,22 +39,32 @@ export default function ResearchGroupsPage() {
 
               <div className="grid" style={{ marginTop: "0.9rem" }}>
                 {areaGroups.map((group: any) => (
-                  <article key={group.slug} className="card">
-                    <h3>
-                      <Link href={`/research-groups/${group.slug}`}>
-                        {group.name}
-                      </Link>
-                    </h3>
-                    {group.pi && (
-                      <p style={{ marginBottom: "0.25rem" }}>
-                        <strong>PI:</strong> {group.pi}
+                  <article key={group.slug} className="card research-group-card">
+                    <div>
+                      <h3>
+                        {group.externalUrl ? (
+                          <a
+                            href={group.externalUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {group.name}
+                          </a>
+                        ) : (
+                          group.name
+                        )}
+                      </h3>
+                      {group.pi && (
+                        <p style={{ marginBottom: "0.25rem" }}>
+                          <strong>PI:</strong> {group.pi}
+                        </p>
+                      )}
+                      <p>
+                        {group.highlight ||
+                          group.description ||
+                          "Research on microbiology and related themes at SILS."}
                       </p>
-                    )}
-                    <p>
-                      {group.highlight ||
-                        group.description ||
-                        "Research on microbiology and related themes at SILS."}
-                    </p>
+                    </div>
                   </article>
                 ))}
               </div>

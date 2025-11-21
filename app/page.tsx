@@ -19,19 +19,21 @@ export default function Home() {
   return (
     <div className="hero-wrap">
       {/* HERO */}
-      <section className="hero">
+      <section id="hero" className="hero">
         <div className="container hero-inner">
           <div className="animate-fade-up">
             <p className="section-kicker">
-              Swammerdam Institute for Life Sciences · University of Amsterdam
+              Swammerdam Institute for Life Sciences              
+            </p>
+            <p className="section-kicker">
+              University of Amsterdam
             </p>
             <h1>Microbiology Theme at SILS</h1>
             <p>
               Microorganisms shape our health, food and environment. The
-              Microbiology theme at SILS studies how microbes grow,
-              communicate and interact with hosts, and translates this
-              knowledge into applications for health, industry and
-              sustainability.
+              Microbiology theme at SILS studies how microbes grow, communicate
+              and interact with hosts, and translates this knowledge into
+              applications for health, industry and sustainability.
             </p>
 
             <div className="hero-cta">
@@ -67,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* NEWS */}
-      <section className="section">
+      <section id="news" className="section">
         <div className="container">
           <p className="section-kicker">News & context</p>
           <h2 className="section-title">Microbiology across Amsterdam</h2>
@@ -76,14 +78,14 @@ export default function Home() {
             Microbiome Health and Systems Biology, and to the Amsterdam
             Microbiome Expertise Center (AMEC) and AMSA seminar series.
           </p>
-          <div style={{ marginTop: "1rem" }}>
-            <NewsRotator />
-          </div>
+
+          {/* NewsRotator is now inside .news-rotator glass box */}
+          <NewsRotator />
         </div>
       </section>
 
-      {/* RESEARCH AREAS OVERVIEW */}
-      <section className="section">
+      {/* RESEARCH AREAS ONLY – vertical, clickable list */}
+      <section id="research" className="section">
         <div className="container">
           <p className="section-kicker">Research areas</p>
           <h2 className="section-title">How microbiology at SILS is organised</h2>
@@ -95,12 +97,19 @@ export default function Home() {
             areas.
           </p>
 
-          <div className="grid research-areas-grid">
+          <div className="research-areas-list">
             {areas.map((area: any) => (
-              <article key={area.slug} className="card">
+              <a
+                key={area.slug}
+                href={`/research-groups#${area.slug}`}
+                className="card"
+              >
                 <h3>{area.title}</h3>
                 <p>{area.description}</p>
-              </article>
+                <span className="research-area-link">
+                  View groups in this area →
+                </span>
+              </a>
             ))}
           </div>
         </div>

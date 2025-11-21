@@ -180,10 +180,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               }}
             >
               <Image
-                src="/logo1.png"
+                src="/logo.png"
                 alt="Microbiology theme logo"
-                width={38}
-                height={38}
+                width={52}
+                height={52}
                 priority
               />
               <div>
