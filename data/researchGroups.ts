@@ -73,12 +73,11 @@ export const researchGroups: MicrobiologyGroup[] = [
       "Molecular microbial physiology and systems biology of microbial cell factories, focusing on fermentation, photosynthesis and sustainable biotechnology.",
   }, // 
   {
-    slug: "dna-rna-interaction-lab",
+    slug: "drna",
     areaSlug: "bacterial-cell-biology-physiology",
     name: "DNA & RNA Interaction Lab (d.r.n.a)",
     pi: "Dr. Gaurav Dugar",
     email: "G.Dugar@uva.nl",
-    externalUrl: "https://drna.nl",
     shortDescription:
       "Data-driven decoding of bacterial gene regulation using high-throughput experiments and unsupervised learning across multi‑omics data.",
   }, // 

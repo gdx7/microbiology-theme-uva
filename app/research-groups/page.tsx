@@ -42,7 +42,13 @@ export default function ResearchGroupsPage() {
                   <article key={group.slug} className="card research-group-card">
                     <div>
                       <h3>
-                        {group.externalUrl ? (
+                        {group.slug === "drna" ? (
+                          // Internal page for d.r.n.a lab
+                          <Link href={`/research-groups/${group.slug}`}>
+                            {group.name}
+                          </Link>
+                        ) : group.externalUrl ? (
+                          // Other groups with external URLs still link out
                           <a
                             href={group.externalUrl}
                             target="_blank"
@@ -51,6 +57,7 @@ export default function ResearchGroupsPage() {
                             {group.name}
                           </a>
                         ) : (
+                          // Fallback: plain text name
                           group.name
                         )}
                       </h3>
