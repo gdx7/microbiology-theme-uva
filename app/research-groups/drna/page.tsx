@@ -6,70 +6,112 @@ export default function DRNALabPage() {
   return (
     <section className="section">
       <div className="container">
-        {/* Intro / hero for the group */}
         <p className="section-kicker">Research group</p>
-        <h1 className="section-title">drna – DNA &amp; RNA Interaction lab</h1>
+        <h1 className="section-title">DNA &amp; RNA Interaction Lab (DRL)</h1>
         <p className="lead">
-          The drna lab studies how RNA and DNA
-          interactions shape bacterial gene regulation. We are particularly
-          interested in non-coding RNAs, RNA/DNA-binding proteins and how they
-          jointly control protein synthesis and cellular decision-making.
+          The DNA &amp; RNA Interaction Lab (d.r.n.a) studies how RNA and DNA
+          interactions shape bacterial gene regulation and chromosome
+          organisation. We combine new experimental methods with data-driven
+          analysis to uncover non-canonical regulatory mechanisms in bacteria.
         </p>
 
-        <div
-          className="grid"
+        {/* Local sub-navigation */}
+        <nav
+          aria-label="DRNA lab sections"
           style={{
-            marginTop: "1.6rem",
-            gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1fr)",
+            marginTop: "1.4rem",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.6rem",
           }}
         >
-          <div>
-            <h2 className="section-title" style={{ fontSize: "1.1rem" }}>
-              What we do
-            </h2>
-            <p style={{ fontSize: "0.95rem", marginBottom: "0.6rem" }}>
-              Our research focuses on the regulatory logic of RNA and DNA
-              interactions in bacteria. We explore how non-coding RNAs,
-              RNA-binding proteins and DNA-associated factors coordinate to
-              control translation and other gene expression processes. A key aim
-              is to uncover unexpected, &quot;non-canonical&quot; interactions
-              that reveal new concepts in genome regulation.
-            </p>
-            <p style={{ fontSize: "0.95rem" }}>
-              We are curious about how these regulatory layers help bacteria
-              adapt to stress, infection and changing environments, and how this
-              knowledge can eventually feed into biotechnology and medicine.
-            </p>
-          </div>
+          {[
+            { href: "#what-we-do", label: "What we do" },
+            { href: "#how-we-do-it", label: "How we do it" },
+            { href: "#team", label: "Team" },
+            { href: "#publications", label: "Publications" },
+            { href: "#links", label: "Links & opportunities" },
+          ].map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="btn btn-outline"
+              style={{ fontSize: "0.8rem", textTransform: "uppercase" }}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
 
-          <div>
-            <h2 className="section-title" style={{ fontSize: "1.1rem" }}>
-              How we do it
-            </h2>
-            <p style={{ fontSize: "0.95rem", marginBottom: "0.6rem" }}>
-              We develop and apply methods to capture RNA–RNA, RNA–protein and
-              RNA–DNA contacts directly inside bacterial cells. By combining
-              these approaches with deep-sequencing and multi-omics readouts, we
-              can map regulatory interactions at high resolution.
-            </p>
-            <p style={{ fontSize: "0.95rem" }}>
-              We make extensive use of data-driven analysis. Unsupervised
-              learning and other machine-learning methods help us detect
-              structure in large, multidimensional datasets without imposing
-              strong prior assumptions, allowing unusual or hidden regulatory
-              patterns to emerge from the data.
-            </p>
+        {/* What we do */}
+        <div id="what-we-do" style={{ marginTop: "2.4rem" }}>
+          <h2 className="section-title" style={{ fontSize: "1.2rem" }}>
+            What we do
+          </h2>
+          <p style={{ fontSize: "0.95rem" }}>
+            We are interested in how RNA and DNA interactions control bacterial
+            gene expression and cell physiology. Our focus is on non-coding
+            RNAs, RNA-binding proteins and DNA-associated factors that together
+            orchestrate translation, stress responses and cellular decisions.
+          </p>
+          <p style={{ fontSize: "0.95rem", marginTop: "0.6rem" }}>
+            We study these processes in a range of bacterial systems, with
+            relevance for infection biology, microbiome function and microbial
+            biotechnology.
+          </p>
+        </div>
+
+        {/* How we do it */}
+        <div id="how-we-do-it" style={{ marginTop: "2.4rem" }}>
+          <h2 className="section-title" style={{ fontSize: "1.2rem" }}>
+            How we do it
+          </h2>
+          <div
+            className="grid"
+            style={{
+              marginTop: "1rem",
+              gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1.2fr)",
+            }}
+          >
+            <article className="card">
+              <h3>Experimental approaches</h3>
+              <p style={{ fontSize: "0.9rem" }}>
+                We develop and use methods to capture RNA–RNA, RNA–protein and
+                RNA–DNA contacts directly inside cells, and combine these with
+                deep sequencing and multi-omics readouts. This allows us to map
+                regulatory interactions at high resolution.
+              </p>
+              <p style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}>
+                Our work includes bacterial genetics, physiology, stress
+                responses and infection-relevant models.
+              </p>
+            </article>
+
+            <article className="card">
+              <h3>Data-driven analysis</h3>
+              <p style={{ fontSize: "0.9rem" }}>
+                We use unsupervised learning and other machine-learning
+                approaches to detect structure in large, multidimensional
+                datasets without strong prior assumptions. This helps us
+                identify unexpected regulatory modules and chromosomal
+                organisations.
+              </p>
+              <p style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}>
+                The lab values open, reproducible analysis workflows and close
+                collaboration between experimental and computational team
+                members.
+              </p>
+            </article>
           </div>
         </div>
 
         {/* Team */}
-        <div style={{ marginTop: "2.4rem" }}>
+        <div id="team" style={{ marginTop: "2.6rem" }}>
           <h2 className="section-title" style={{ fontSize: "1.2rem" }}>
             Team
           </h2>
 
           <div className="grid people-grid" style={{ marginTop: "1rem" }}>
-            {/* Current team – based on drna.nl/team */}
             <article className="card">
               <h3>Gaurav Dugar</h3>
               <p
@@ -92,7 +134,7 @@ export default function DRNALabPage() {
                   color: "#64748b",
                 }}
               >
-                PhD student (Oct 2024 – )
+                PhD candidate
               </p>
             </article>
 
@@ -105,7 +147,7 @@ export default function DRNALabPage() {
                   color: "#64748b",
                 }}
               >
-                Research technician (from 2025)
+                Research technician
               </p>
             </article>
 
@@ -118,70 +160,36 @@ export default function DRNALabPage() {
                   color: "#64748b",
                 }}
               >
-                Bachelor student (2025)
+                Bachelor student
               </p>
             </article>
           </div>
 
-          {/* Team philosophy & alumni summary */}
           <div style={{ marginTop: "1.6rem" }}>
             <h3
               className="section-title"
               style={{ fontSize: "1rem", marginBottom: "0.4rem" }}
             >
-              Team philosophy
+              Lab culture
             </h3>
             <p style={{ fontSize: "0.95rem" }}>
-              The lab places a strong emphasis on a kind, inclusive and
-              collaborative environment. Supporting one another, being open
-              about challenges and celebrating different backgrounds are seen as
-              essential for both good science and personal growth.
+              We aim to create a kind, inclusive and collaborative environment
+              where people feel safe to ask questions, share ideas and discuss
+              challenges. We value diversity of backgrounds and perspectives as
+              essential for both good science and personal development.
             </p>
-          </div>
-
-          <div style={{ marginTop: "1.6rem" }}>
-            <h3
-              className="section-title"
-              style={{ fontSize: "1rem", marginBottom: "0.4rem" }}
-            >
-              Alumni (selection)
-            </h3>
-            <ul
-              style={{
-                listStyle: "disc",
-                paddingLeft: "1.2rem",
-                fontSize: "0.9rem",
-              }}
-            >
-              <li>
-                Dolça Serra Sallent – Erasmus Bachelor student
-              </li>
-              <li>
-                Alberto Pavan – Master student (Bioinformatics)
-              </li>
-              <li>
-                Selina Forrer – PhD student
-              </li>
-              <li>
-                Irene Marco del Prado – Research assistant
-              </li>
-              <li>
-                Several Bachelor and Master students contributing to projects
-                on bacterial RNA biology and gene regulation.
-              </li>
-            </ul>
           </div>
         </div>
 
         {/* Publications */}
-        <div style={{ marginTop: "2.6rem" }}>
+        <div id="publications" style={{ marginTop: "2.6rem" }}>
           <h2 className="section-title" style={{ fontSize: "1.2rem" }}>
             Selected publications
           </h2>
           <p className="lead" style={{ marginBottom: "0.9rem" }}>
-            A full and regularly updated list of publications is maintained on
-            the lab website. Below is a selection illustrating the scope of our
-            work on gene regulation, CRISPR biology and bacterial physiology.
+            A selection of recent work illustrating our interests in gene
+            regulation, chromosome organisation, CRISPR biology and bacterial
+            physiology.
           </p>
 
           <ul
@@ -194,66 +202,72 @@ export default function DRNALabPage() {
           >
             <li>
               Teichmann L, Wenne M, Luitwieler S, <strong>Dugar G</strong>, et
-              al. (2025). Genetic adaptation to amoxicillin in{" "}
-              <em>Escherichia coli</em>. <em>PLOS One</em>.
+              al. Genetic adaptation to amoxicillin in{" "}
+              <em>Escherichia coli</em>. <em>PLOS One</em> (2025).
             </li>
             <li>
-              Han Y, Wang B, Agnolin A, <strong>Dugar G</strong>, Hamoen LW
-              (2025). Ribosome pausing in amylase-producing{" "}
-              <em>Bacillus subtilis</em> during long fermentation.{" "}
-              <em>Microbial Cell Factories</em>.
+              Han Y, Wang B, Agnolin A, <strong>Dugar G</strong>, Hamoen LW.
+              Ribosome pausing in amylase-producing <em>Bacillus subtilis</em>{" "}
+              during long fermentation. <em>Microbial Cell Factories</em>{" "}
+              (2025).
             </li>
             <li>
               Wang B, Kes MBMJ, van den Berg van Saparoea ACH,{" "}
-              <strong>Dugar G</strong>, Hamoen LW (2024). Increasing enzyme
-              production via LonA inactivation in <em>Bacillus subtilis</em>.{" "}
-              <em>Microbial Cell Factories</em>.
+              <strong>Dugar G</strong>, Hamoen LW. Increasing enzyme production
+              via LonA inactivation in <em>Bacillus subtilis</em>.{" "}
+              <em>Microbial Cell Factories</em> (2024).
             </li>
             <li>
-              <strong>Dugar G</strong>, Hofmann A, Heermann DW, Hamoen LW
-              (2022). A chromosomal loop anchor mediating bacterial genome
-              organization. <em>Nature Genetics</em>.
+              <strong>Dugar G</strong>, Hofmann A, Heermann DW, Hamoen LW. A
+              chromosomal loop anchor mediating bacterial genome organisation.{" "}
+              <em>Nature Genetics</em> (2022).
             </li>
             <li>
-              Jiao C, Sharma S, <strong>Dugar G</strong>, et al. (2021).
-              Noncanonical crRNAs enabling multiplexable RNA detection by Cas9.{" "}
-              <em>Science</em>.
-            </li>
-            <li>
-              Saha C, Mohanraju P, Stubbs A, <strong>Dugar G</strong>, et al.
-              (2020). Guide-free Cas9 from pathogenic{" "}
-              <em>Campylobacter jejuni</em> causes severe DNA damage.{" "}
-              <em>Science Advances</em>.
+              Jiao C, Sharma S, <strong>Dugar G</strong>, et al. Noncanonical
+              crRNAs enabling multiplexable RNA detection by Cas9.{" "}
+              <em>Science</em> (2021).
             </li>
           </ul>
-
           <p style={{ marginTop: "0.8rem", fontSize: "0.9rem" }}>
-            For more publications, including earlier work on CRISPR RNA
-            biogenesis and bacterial transcriptomics, please refer to the full
-            list on the lab website.
+            For a complete and up-to-date list of publications, please refer to
+            the lab website.
           </p>
         </div>
 
-        {/* Lab website link & back link */}
-        <div
-          style={{
-            marginTop: "2.6rem",
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "0.75rem",
-          }}
-        >
-          <a
-            href="https://drna.nl"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-primary"
+        {/* Links & opportunities */}
+        <div id="links" style={{ marginTop: "2.6rem" }}>
+          <h2 className="section-title" style={{ fontSize: "1.2rem" }}>
+            Links &amp; opportunities
+          </h2>
+          <p style={{ fontSize: "0.95rem" }}>
+            We welcome enquiries from students and researchers interested in
+            bacterial RNA biology, chromosome organisation and data-driven
+            microbiology.
+          </p>
+
+          <div
+            style={{
+              marginTop: "1.2rem",
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "0.8rem",
+            }}
           >
-            Visit lab website (drna.nl)
-          </a>
-          <Link href="/research-groups" className="btn btn-outline">
-            Back to all research groups
-          </Link>
+            <a
+              href="https://drna.nl"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+            >
+              Visit lab website (drna.nl)
+            </a>
+            <a href="mailto:G.Dugar@uva.nl" className="btn btn-outline">
+              Email the group
+            </a>
+            <Link href="/people" className="btn btn-outline">
+              View all PIs in the Theme
+            </Link>
+          </div>
         </div>
       </div>
     </section>
