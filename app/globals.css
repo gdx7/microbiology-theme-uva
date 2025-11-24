@@ -35,11 +35,20 @@ body {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, #eff6ff 0, #f8fafc 45%)
-    #f8fafc;
   color: var(--text-main);
   line-height: 1.5;
+
+  /* Global background: image + soft gradient */
+  background-color: #f8fafc;
+  background-image:
+    url("/back.png"),
+    radial-gradient(circle at top left, #eff6ff 0, #f8fafc 45%);
+  background-size: cover, auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, top left;
+  background-attachment: fixed, fixed;
 }
+
 
 /* =========
    Links
