@@ -41,7 +41,7 @@ body {
   /* Global background: white overlay + image + soft gradient */
   background-color: #f8fafc;
   background-image:
-    linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.6)),
+    linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.5)),
     url("/back.png"),
     radial-gradient(circle at top left, #eff6ff 0, #f8fafc 45%);
   background-size: cover, cover, auto;
