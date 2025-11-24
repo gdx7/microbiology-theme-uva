@@ -2,33 +2,38 @@
 
 export type ResearchArea = {
   slug: string;
+  code: string;
   title: string;
   description: string;
 };
 
 export const researchAreas: ResearchArea[] = [
   {
-    slug: "microbial-food-safety-microbiomes",
-    title: "Microbial food safety & microbiomes",
+    slug: "molecular-biology-microbial-food-safety",
+    code: "MBMFS",
+    title: "Molecular Biology and Microbial Food Safety (MBMFS)",
     description:
-      "Fundamental and applied microbiology focused on food spoilage and safety, antimicrobial resistance, and gut and oral microbiomes.",
-  }, // 
+      "Cluster led by Prof. Stanley Brul focusing on microbial food safety and microbiomes across hosts, industrial systems and environments, integrating molecular biology with risk assessment and regulation.",
+  },
   {
-    slug: "bacterial-cell-biology-physiology",
-    title: "Bacterial cell biology & physiology",
+    slug: "bacterial-cell-biology",
+    code: "BCB",
+    title: "Bacterial Cell Biology (BCB)",
     description:
-      "Molecular physiology of bacteria, including cell division, differentiation, RNA-based regulation and antibiotic mode-of-action.",
-  }, // 
+      "Cluster led by Prof. Leendert Hamoen that studies bacterial physiology, chromosome organisation and gene regulation, from fundamental mechanisms to infection biology and antimicrobial resistance.",
+  },
   {
     slug: "microbiome-engineering",
-    title: "Microbiome engineering",
+    code: "ME",
+    title: "Microbiome Engineering (ME)",
     description:
-      "Interdisciplinary research on gut microbiome function and how microbial consortia can be engineered to benefit host health.",
-  }, // 
+      "Cluster led by Prof. Sahar El Aidy focusing on human and industrial microbiomes, engineering microbial communities and leveraging microbiome insights for health and biotechnology applications.",
+  },
   {
-    slug: "mass-spectrometry-biomolecules",
-    title: "Mass spectrometry of biomolecules",
+    slug: "cross-theme-expertise",
+    code: "CTE",
+    title: "Cross-theme expertise & endowed chairs",
     description:
-      "Mass-spectrometry-based proteomics, metabolomics and lipidomics supporting microbiology and systems biology projects.",
-  }, // 
+      "Cross-cutting expertise and endowed chairs that support food safety, industrial biotechnology and mass-spectrometry-driven omics across all microbiology research pillars.",
+  },
 ];

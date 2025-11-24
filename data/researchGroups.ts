@@ -1,110 +1,237 @@
 // data/researchGroups.ts
-export type MicrobiologyGroup = {
+
+export type ResearchGroup = {
   slug: string;
   areaSlug: string;
   name: string;
-  pi: string;
-  email?: string;
+  code?: string;
+  pi?: string;
+  role?: string;
+  contactEmail?: string;
   externalUrl?: string;
-  shortDescription: string;
+  shortDescription?: string;
+  description?: string;
+  highlight?: string;
+  keywords?: string[];
 };
 
-export const researchGroups: MicrobiologyGroup[] = [
-  // Area 1 – Microbial food safety & microbiomes
+export const researchGroups: ResearchGroup[] = [
+  // =========
+  // MBMFS cluster – Chair: Prof. Stanley Brul
+  // =========
   {
-    slug: "brul-microbial-food-safety",
-    areaSlug: "microbial-food-safety-microbiomes",
-    name: "Microbial Food Safety & Stress Responses",
-    pi: "Prof. dr. Stanley Brul",
-    email: "s.brul@uva.nl",
-    externalUrl:
-      "https://sils.uva.nl/content/research-groups/molecular-biology-and-microbial-food-safety/molecular-biology--microbial-food-safety.html",
-    shortDescription:
-      "Spoilage and pathogenic bacteria in food chains, stress physiology, spore biology and antimicrobial resistance, with links to microbiome and biotechnology.",
-  }, // 
-  {
-    slug: "wortel-evolutionary-systems-microbiology",
-    areaSlug: "microbial-food-safety-microbiomes",
-    name: "Evolutionary Systems Microbiology",
-    pi: "Dr. Meike Wortel",
-    email: "m.t.wortel@uva.nl",
-    externalUrl: "https://www.meikewortel.com",
-    shortDescription:
-      "Evolutionary systems biology of microbes using mathematical and computational tools to study metabolic strategies, microbiome resilience and antibiotic resistance evolution.",
-  }, // 
-  {
-    slug: "zhang-gut-microbiome-physiology",
-    areaSlug: "microbial-food-safety-microbiomes",
-    name: "Gut Microbiome Physiology",
+    slug: "gumi-lab",
+    areaSlug: "molecular-biology-microbial-food-safety",
+    name: "Gumi Lab (GL)",
+    code: "GL",
     pi: "Dr. Jianbo Zhang",
-    email: "j.zhang6@uva.nl",
+    role: "Principal Investigator",
     shortDescription:
-      "Microbiome–host crosstalk and gut bacteria studied with advanced in vitro gut models and organ-on-chip approaches.",
-  }, // 
+      "Microbiome and microbial community research using multi-omics, imaging and modelling in hosts, environments and industrial settings.",
+    description:
+      "The Gumi Lab studies microbial communities across hosts, ecosystems and industrial systems, combining multi-omics, cultivation and imaging with computational modelling to understand and steer microbiome behaviour.",
+    keywords: ["microbiome", "multi-omics", "modelling", "ecosystems", "RS1"],
+  },
   {
-    slug: "verhoef-microbial-food-safety-risk",
-    areaSlug: "microbial-food-safety-microbiomes",
-    name: "Microbial Food Safety & Risk",
-    pi: "Prof. dr. ir. Linda Verhoef",
-    email: "l.p.b.verhoef@uva.nl",
+    slug: "evosysbio-lab",
+    areaSlug: "molecular-biology-microbial-food-safety",
+    name: "EvoSysBio Lab (ESB)",
+    code: "ESB",
+    pi: "Dr. Meike Wortel",
+    role: "Principal Investigator",
     shortDescription:
-      "Microbial food safety and epidemiological determination of microbiological risks in food chains, in close collaboration with the Dutch Food Safety Authority.",
-  }, // 
+      "Evolutionary systems biology of microbial communities, linking experimental evolution, modelling and data-driven analysis.",
+    description:
+      "The EvoSysBio Lab (ESB) uses evolutionary systems biology to study how microbial populations and communities adapt, integrating experiments, theory and data-driven modelling to connect genotype, phenotype and ecology.",
+    keywords: [
+      "evolutionary systems biology",
+      "microbial communities",
+      "modelling",
+      "RS1",
+    ],
+  },
+  {
+    slug: "spore-lab",
+    areaSlug: "molecular-biology-microbial-food-safety",
+    name: "Spore Lab",
+    code: "Spore",
+    pi: "Prof. Dr. Stanley Brul",
+    role: "Chair MBMFS",
+    shortDescription:
+      "Molecular biology and physiology of spores and stress-resistant microbes in relation to food safety and infection.",
+    description:
+      "The Spore Lab investigates spore formation, stress responses and survival strategies of microbes that are relevant for food safety, infection biology and industrial processes.",
+    keywords: [
+      "spores",
+      "stress response",
+      "food safety",
+      "infection biology",
+      "RS1",
+      "RS2",
+      "RS3",
+    ],
+  },
 
-  // Area 2 – Bacterial cell biology & physiology
+  // =========
+  // BCB cluster – Chair: Prof. Leendert Hamoen
+  // =========
   {
-    slug: "hamoen-bacterial-cell-biology",
-    areaSlug: "bacterial-cell-biology-physiology",
-    name: "Bacterial Cell Biology",
-    pi: "Prof. dr. Leendert Hamoen",
-    email: "L.W.Hamoen@uva.nl",
-    externalUrl:
-      "https://sils.uva.nl/content/research-groups/bacterial-cell-biology-and-physiology-groups/bacterial-cell-biology-and-physiology-groups.html",
-    shortDescription:
-      "General microbiology focused on bacterial cell division and differentiation, chromosome organisation and antibiotic mode-of-action.",
-  }, // 
-  {
-    slug: "branco-dos-santos-molecular-microbial-physiology",
-    areaSlug: "bacterial-cell-biology-physiology",
-    name: "Molecular Microbial Physiology",
+    slug: "molecular-microbial-physiology",
+    areaSlug: "bacterial-cell-biology",
+    name: "Molecular Microbial Physiology (MMP)",
+    code: "MMP",
     pi: "Dr. Filipe Branco dos Santos",
-    email: "F.BrancodosSantos@uva.nl",
+    role: "Principal Investigator",
     shortDescription:
-      "Molecular microbial physiology and systems biology of microbial cell factories, focusing on fermentation, photosynthesis and sustainable biotechnology.",
-  }, // 
+      "Quantitative microbial physiology and biotechnology, using systems and synthetic biology for strain development.",
+    description:
+      "The Molecular Microbial Physiology group studies microbial physiology with quantitative and systems approaches, developing next-generation microbial biotechnology platforms and production strains.",
+    keywords: [
+      "microbial physiology",
+      "systems biology",
+      "biotechnology",
+      "RS2",
+      "RS3",
+    ],
+  },
   {
     slug: "drna",
-    areaSlug: "bacterial-cell-biology-physiology",
-    name: "DNA & RNA Interaction Lab (d.r.n.a)",
+    areaSlug: "bacterial-cell-biology",
+    name: "DNA & RNA Interaction Lab (drna lab)",
+    code: "DRL",
     pi: "Dr. Gaurav Dugar",
-    email: "G.Dugar@uva.nl",
+    role: "Principal Investigator",
+    contactEmail: "G.Dugar@uva.nl",
+    externalUrl: "https://drna.nl",
     shortDescription:
-      "Data-driven decoding of bacterial gene regulation using high-throughput experiments and unsupervised learning across multi‑omics data.",
-  }, // 
-
-  // Area 3 – Microbiome engineering
+      "RNA-centric microbiology, mapping DNA–RNA–protein interaction networks and non-canonical regulation in bacteria.",
+    description:
+      "The drna Lab develops experimental and data-driven methods to map RNA and DNA interactions in bacteria, uncovering non-canonical regulation and chromosomal organisation with implications for infection biology and biotechnology.",
+    keywords: [
+      "RNA biology",
+      "chromosome organisation",
+      "gene regulation",
+      "infection biology",
+      "RS2",
+    ],
+  },
   {
-    slug: "el-aidy-microbiome-engineering",
+    slug: "general-microbiology-lab",
+    areaSlug: "bacterial-cell-biology",
+    name: "General Microbiology Lab",
+    code: "GML",
+    pi: "Prof. Dr. Leendert Hamoen",
+    role: "Chair Bacterial Cell Biology",
+    shortDescription:
+      "Fundamental bacterial cell biology and chromosome dynamics underpinning growth, stress responses and pathogenesis.",
+    description:
+      "The General Microbiology Lab focuses on fundamental bacterial cell biology, including chromosome dynamics, cell-cycle control and stress responses that underpin growth, survival and pathogenic potential.",
+    keywords: [
+      "bacterial cell biology",
+      "chromosome dynamics",
+      "cell cycle",
+      "RS2",
+      "RS3",
+    ],
+  },
+
+  // =========
+  // ME cluster – Chair: Prof. Sahar El Aidy
+  // =========
+  {
+    slug: "microbiome-engineering-lab",
     areaSlug: "microbiome-engineering",
-    name: "Microbiome Engineering",
-    pi: "Prof. dr. Sahar El Aidy",
-    email: "s.elaidy@uva.nl",
-    externalUrl:
-      "https://sils.uva.nl/content/research-groups/microbiome-engineering/microbiome-engineering.html",
+    name: "Microbiome Engineering (ME) Lab",
+    code: "ME",
+    pi: "Prof. Dr. Sahar El Aidy",
+    role: "Chair Microbiome Engineering",
     shortDescription:
-      "Interdisciplinary research on gut microbiome function and engineered microbial consortia that modulate host health.",
-  }, // 
-
-  // Area 4 – Mass spectrometry of biomolecules
+      "Human and industrial microbiome research and engineering, targeting health, food and biotechnology applications.",
+    description:
+      "The Microbiome Engineering Lab studies how microbiomes influence human health and biotechnological processes, and develops strategies to engineer microbial communities for diagnostics, therapies and sustainable production.",
+    keywords: [
+      "human microbiome",
+      "microbiome engineering",
+      "biotechnology",
+      "RS1",
+      "RS3",
+    ],
+  },
   {
-    slug: "kramer-mass-spectrometry-biomolecules",
-    areaSlug: "mass-spectrometry-biomolecules",
-    name: "Mass Spectrometry of Biomolecules",
-    pi: "Dr. Gertjan Kramer",
-    email: "g.kramer@uva.nl",
-    externalUrl:
-      "https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html",
+    slug: "imaging-functional-analysis",
+    areaSlug: "microbiome-engineering",
+    name: "Imaging and Functional Analysis",
+    code: "IFA",
+    pi: "PI in Imaging and Functional Analysis",
+    role: "PI (imaging & functional analysis)",
     shortDescription:
-      "Mass-spectrometry-based proteomics, metabolomics and lipidomics core facility supporting microbiology and systems biology projects.",
-  }, // 
+      "Advanced imaging and functional analysis of microbial communities and host–microbe interactions.",
+    description:
+      "This group contributes expertise in advanced imaging and functional analysis, supporting projects on microbiomes, infection biology and biotechnology with quantitative spatial and functional readouts.",
+    keywords: ["imaging", "functional analysis", "microbiomes", "RS1"],
+  },
+
+  // =========
+  // Cross-theme expertise & endowed chairs
+  // =========
+  {
+    slug: "mass-spectrometry-of-biomolecules",
+    areaSlug: "cross-theme-expertise",
+    name: "Mass Spectrometry of Biomolecules (MSB)",
+    code: "MSB",
+    pi: "Dr. Gertjan Kramer",
+    role: "Core facility lead",
+    shortDescription:
+      "Institute-wide mass spectrometry core, supporting microbial omics and quantitative biomolecular analysis.",
+    description:
+      "The Mass Spectrometry of Biomolecules group functions as the institute’s mass spectrometry core, supporting microbial omics, quantitative proteomics and metabolomics across the Microbiology Theme and other SILS programs.",
+    keywords: [
+      "mass spectrometry",
+      "omics",
+      "proteomics",
+      "metabolomics",
+      "RS1",
+      "RS3",
+    ],
+  },
+  {
+    slug: "nvwa-chair-microbial-food-safety",
+    areaSlug: "cross-theme-expertise",
+    name: "NVWA Chair on Microbial Food Safety",
+    code: "NVWA",
+    pi: "Prof. Linda Verhoef",
+    role: "Endowed chair",
+    shortDescription:
+      "Endowed chair connecting microbial food safety research with regulatory practice and national policy.",
+    description:
+      "The NVWA Chair on Microbial Food Safety links fundamental and applied microbiology at SILS with Dutch national policy and regulatory practice, strengthening the translation of food safety research into governance.",
+    keywords: [
+      "food safety",
+      "risk assessment",
+      "regulation",
+      "endowed chair",
+      "RS2",
+    ],
+  },
+  {
+    slug: "industrial-molecular-microbiology-chair",
+    areaSlug: "cross-theme-expertise",
+    name:
+      "DSM-Firmenich Beta-Plus Foundation Chair of Industrial Molecular Microbiology",
+    code: "IMM",
+    pi: "Prof. Ghislain Schyns",
+    role: "Endowed chair",
+    shortDescription:
+      "Endowed chair in industrial molecular microbiology, bridging academic research and biotechnology industry.",
+    description:
+      "This endowed chair strengthens industrial molecular microbiology, connecting the Microbiology Theme with DSM-Firmenich and broader biotechnology partners to develop sustainable microbial production platforms.",
+    keywords: [
+      "industrial microbiology",
+      "biotechnology",
+      "industry collaboration",
+      "endowed chair",
+      "RS1",
+      "RS3",
+    ],
+  },
 ];
