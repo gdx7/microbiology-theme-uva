@@ -50,8 +50,7 @@ export default function ContactPage() {
               <h3>General enquiries</h3>
               <p>
                 For questions about the Microbiology theme, research
-                collaborations or student projects, please contact the theme
-                coordinator or one of the principal investigators.
+                collaborations or student projects, please contact one of the principal investigators.
               </p>
               <p style={{ marginTop: "0.6rem" }}>
                 <strong>Email:</strong>{" "}
