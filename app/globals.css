@@ -38,16 +38,18 @@ body {
   color: var(--text-main);
   line-height: 1.5;
 
-  /* Global background: image + soft gradient */
+  /* Global background: white overlay + image + soft gradient */
   background-color: #f8fafc;
   background-image:
+    linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)),
     url("/back.png"),
     radial-gradient(circle at top left, #eff6ff 0, #f8fafc 45%);
-  background-size: cover, auto;
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, top left;
-  background-attachment: fixed, fixed;
+  background-size: cover, cover, auto;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center, center, top left;
+  background-attachment: fixed, fixed, fixed;
 }
+
 
 
 /* =========
