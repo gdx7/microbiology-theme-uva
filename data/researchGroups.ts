@@ -20,7 +20,7 @@ export const researchGroups: ResearchGroup[] = [
   // MBMFS cluster – Chair: Prof. Stanley Brul
   // =========
   {
-    slug: "gumi-lab",
+    slug: "zhang", // was: gumi-lab
     areaSlug: "molecular-biology-microbial-food-safety",
     name: "Gumi Lab (GL)",
     code: "GL",
@@ -33,7 +33,7 @@ export const researchGroups: ResearchGroup[] = [
     keywords: ["microbiome", "multi-omics", "modelling", "ecosystems", "RS1"],
   },
   {
-    slug: "evosysbio-lab",
+    slug: "wortel", // was: evosysbio-lab
     areaSlug: "molecular-biology-microbial-food-safety",
     name: "EvoSysBio Lab (ESB)",
     code: "ESB",
@@ -51,7 +51,7 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
   {
-    slug: "spore-lab",
+    slug: "brul", // was: spore-lab
     areaSlug: "molecular-biology-microbial-food-safety",
     name: "Spore Lab",
     code: "Spore",
@@ -76,7 +76,7 @@ export const researchGroups: ResearchGroup[] = [
   // BCB cluster – Chair: Prof. Leendert Hamoen
   // =========
   {
-    slug: "molecular-microbial-physiology",
+    slug: "branco-dos-santos", // was: molecular-microbial-physiology
     areaSlug: "bacterial-cell-biology",
     name: "Molecular Microbial Physiology (MMP)",
     code: "MMP",
@@ -95,13 +95,14 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
   {
-    slug: "drna",
+    slug: "drna", // stays drna (internal page exists)
     areaSlug: "bacterial-cell-biology",
     name: "DNA & RNA Interaction Lab (drna lab)",
     code: "DRL",
     pi: "Dr. Gaurav Dugar",
     role: "Principal Investigator",
     contactEmail: "G.Dugar@uva.nl",
+    // TIP: remove externalUrl if you prefer the list to always link to the internal page
     externalUrl: "https://drna.nl",
     shortDescription:
       "RNA-centric microbiology, mapping DNA–RNA–protein interaction networks and non-canonical regulation in bacteria.",
@@ -116,7 +117,7 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
   {
-    slug: "general-microbiology-lab",
+    slug: "hamoen", // was: general-microbiology-lab
     areaSlug: "bacterial-cell-biology",
     name: "General Microbiology Lab",
     code: "GML",
@@ -139,7 +140,7 @@ export const researchGroups: ResearchGroup[] = [
   // ME cluster – Chair: Prof. Sahar El Aidy
   // =========
   {
-    slug: "microbiome-engineering-lab",
+    slug: "el-aidy", // was: microbiome-engineering-lab
     areaSlug: "microbiome-engineering",
     name: "Microbiome Engineering (ME) Lab",
     code: "ME",
@@ -158,7 +159,7 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
   {
-    slug: "imaging-functional-analysis",
+    slug: "imaging-functional-analysis", // (no internal page created yet)
     areaSlug: "microbiome-engineering",
     name: "Imaging and Functional Analysis",
     code: "IFA",
@@ -175,7 +176,7 @@ export const researchGroups: ResearchGroup[] = [
   // Cross-theme expertise & endowed chairs
   // =========
   {
-    slug: "mass-spectrometry-of-biomolecules",
+    slug: "kramer", // was: mass-spectrometry-of-biomolecules
     areaSlug: "cross-theme-expertise",
     name: "Mass Spectrometry of Biomolecules (MSB)",
     code: "MSB",
@@ -195,7 +196,7 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
   {
-    slug: "nvwa-chair-microbial-food-safety",
+    slug: "verhoef", // was: nvwa-chair-microbial-food-safety
     areaSlug: "cross-theme-expertise",
     name: "NVWA Chair on Microbial Food Safety",
     code: "NVWA",
@@ -214,7 +215,7 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
   {
-    slug: "industrial-molecular-microbiology-chair",
+    slug: "industrial-molecular-microbiology-chair", // (no internal page created yet)
     areaSlug: "cross-theme-expertise",
     name:
       "DSM-Firmenich Beta-Plus Foundation Chair of Industrial Molecular Microbiology",
