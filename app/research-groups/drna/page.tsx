@@ -126,19 +126,6 @@ export default function DRNALabPage() {
             </article>
 
             <article className="card">
-              <h3>Vera van Melis</h3>
-              <p
-                style={{
-                  marginTop: "0.2rem",
-                  fontSize: "0.9rem",
-                  color: "#64748b",
-                }}
-              >
-                PhD candidate
-              </p>
-            </article>
-
-            <article className="card">
               <h3>Daphne Denaijere</h3>
               <p
                 style={{
