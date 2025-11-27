@@ -139,7 +139,7 @@ export default function DRNALabPage() {
             </article>
 
             <article className="card">
-              <h3>Dogukan Türk</h3>
+              <h3>Emma Bouvy</h3>
               <p
                 style={{
                   marginTop: "0.2rem",
@@ -147,7 +147,7 @@ export default function DRNALabPage() {
                   color: "#64748b",
                 }}
               >
-                Bachelor student
+                Research Analyst
               </p>
             </article>
           </div>
