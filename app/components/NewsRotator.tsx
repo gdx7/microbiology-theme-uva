@@ -52,15 +52,16 @@ export default function NewsRotator() {
 
   return (
     <div className="news-rotator">
-      <div style={{ padding: "1rem 1.2rem" }}>
+      <div style={{ padding: "2rem 2.5rem" }}>
         {current.tag && (
           <div
             style={{
-              fontSize: "0.7rem",
+              fontSize: "0.875rem",
               textTransform: "uppercase",
-              letterSpacing: "0.14em",
-              marginBottom: "0.3rem",
-              color: "#64748b",
+              letterSpacing: "0.1em",
+              marginBottom: "0.75rem",
+              color: "var(--primary)",
+              fontWeight: 600,
             }}
           >
             {current.tag}
@@ -68,8 +69,10 @@ export default function NewsRotator() {
         )}
         <h3
           style={{
-            margin: "0 0 0.35rem",
-            fontSize: "1.05rem",
+            margin: "0 0 1rem",
+            fontSize: "1.5rem",
+            fontWeight: 700,
+            color: "var(--text-main)",
           }}
         >
           {current.title}
@@ -77,8 +80,9 @@ export default function NewsRotator() {
         <p
           style={{
             margin: 0,
-            fontSize: "0.9rem",
-            color: "#64748b",
+            fontSize: "1rem",
+            color: "var(--text-soft)",
+            lineHeight: 1.6,
           }}
         >
           {current.description}
@@ -86,36 +90,51 @@ export default function NewsRotator() {
         {current.link && (
           <p
             style={{
-              margin: "0.6rem 0 0",
-              fontSize: "0.87rem",
+              margin: "1.5rem 0 0",
+              fontSize: "0.9375rem",
             }}
           >
-            <a href={current.link} target="_blank" rel="noreferrer">
+            <a
+              href={current.link}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: "var(--primary)",
+                fontWeight: 600,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+              }}
+            >
               Learn more →
             </a>
           </p>
         )}
       </div>
 
-      {/* small dot indicators at the bottom-right */}
+      {/* Navigation dots at the bottom */}
       <div
         style={{
           display: "flex",
-          gap: "0.35rem",
-          justifyContent: "flex-end",
-          padding: "0.6rem 0.9rem",
+          gap: "0.75rem",
+          justifyContent: "center",
+          padding: "1.25rem",
+          borderTop: "1px solid var(--border-subtle)",
         }}
       >
         {slides.map((_, i) => (
-          <span
+          <button
             key={i}
+            onClick={() => setIndex(i)}
+            aria-label={`Go to slide ${i + 1}`}
             style={{
-              width: 6,
-              height: 6,
+              width: i === index ? 32 : 10,
+              height: 10,
               borderRadius: "999px",
-              background: i === index ? "#2563eb" : "#cbd5f5",
-              opacity: i === index ? 1 : 0.6,
-              transition: "background 0.2s ease, opacity 0.2s ease",
+              background: i === index ? "var(--primary)" : "var(--border-medium)",
+              border: "none",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
             }}
           />
         ))}

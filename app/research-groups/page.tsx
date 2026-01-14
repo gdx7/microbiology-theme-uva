@@ -40,13 +40,13 @@ export default function ResearchGroupsPage() {
           if (!areaGroups.length) return null;
 
           return (
-            <div key={area.slug} id={area.slug} style={{ marginTop: "1.8rem" }}>
-              <h2 className="section-title" style={{ fontSize: "1.25rem" }}>
+            <div key={area.slug} id={area.slug} style={{ marginTop: "4rem" }}>
+              <h2 className="section-title">
                 {area.title}
               </h2>
               <p className="lead">{area.description}</p>
 
-              <div className="grid" style={{ marginTop: "0.9rem" }}>
+              <div className="grid">
                 {areaGroups.map((group: any) => {
                   const hasInternal = internalSlugs.has(group.slug);
 
@@ -75,8 +75,8 @@ export default function ResearchGroupsPage() {
                         </h3>
 
                         {group.pi && (
-                          <p style={{ marginBottom: "0.25rem" }}>
-                            <strong>PI:</strong> {group.pi}
+                          <p style={{ marginBottom: "0.75rem", fontSize: "0.9375rem", color: "var(--text-muted)" }}>
+                            <strong>Principal Investigator:</strong> {group.pi}
                           </p>
                         )}
 
@@ -87,7 +87,7 @@ export default function ResearchGroupsPage() {
                         </p>
 
                         {/* Optional helper link row */}
-                        <div style={{ marginTop: "0.6rem" }}>
+                        <div style={{ marginTop: "1.5rem" }}>
                           {hasInternal ? (
                             <Link
                               href={`/research-groups/${group.slug}`}

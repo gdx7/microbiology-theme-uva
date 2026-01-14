@@ -15,161 +15,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {/* Global animated DNA background – appears on ALL pages */}
-        <div className="dna-bg">
-          <svg
-            className="dna-helix-svg"
-            viewBox="0 0 1400 800"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              {/* gradients for the helical backbones */}
-              <linearGradient
-                id="helixGrad1"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="rgba(56,189,248,0.0)" />
-                <stop offset="20%" stopColor="rgba(56,189,248,0.7)" />
-                <stop offset="50%" stopColor="rgba(129,140,248,0.9)" />
-                <stop offset="80%" stopColor="rgba(236,72,153,0.7)" />
-                <stop offset="100%" stopColor="rgba(56,189,248,0.0)" />
-              </linearGradient>
+        {/* Skip to content link for accessibility */}
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
 
-              <linearGradient
-                id="helixGrad2"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="rgba(14,165,233,0.0)" />
-                <stop offset="20%" stopColor="rgba(14,165,233,0.7)" />
-                <stop offset="50%" stopColor="rgba(59,130,246,0.85)" />
-                <stop offset="80%" stopColor="rgba(16,185,129,0.7)" />
-                <stop offset="100%" stopColor="rgba(14,165,233,0.0)" />
-              </linearGradient>
-
-              <linearGradient
-                id="helixGrad3"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="rgba(79,70,229,0.0)" />
-                <stop offset="20%" stopColor="rgba(79,70,229,0.75)" />
-                <stop offset="50%" stopColor="rgba(236,72,153,0.7)" />
-                <stop offset="80%" stopColor="rgba(37,99,235,0.85)" />
-                <stop offset="100%" stopColor="rgba(79,70,229,0.0)" />
-              </linearGradient>
-            </defs>
-
-            {/* UPPER HELIX LAYER */}
-            <g className="dna-layer dna-layer-1">
-              <path
-                className="dna-helix-backbone dna-helix-backbone-1"
-                stroke="url(#helixGrad1)"
-                d="
-                  M 0 140
-                  C 220 40, 420 260, 640 150
-                  C 860 50, 1080 240, 1300 150
-                  C 1350 130, 1380 150, 1400 160
-                "
-              />
-              <path
-                className="dna-helix-backbone dna-helix-backbone-1"
-                stroke="url(#helixGrad1)"
-                d="
-                  M 0 175
-                  C 220 280, 420 80, 640 190
-                  C 860 280, 1080 100, 1300 190
-                  C 1350 220, 1380 180, 1400 200
-                "
-              />
-            </g>
-
-            {/* SECOND HELIX LAYER */}
-            <g className="dna-layer dna-layer-2">
-              <path
-                className="dna-helix-backbone dna-helix-backbone-2"
-                stroke="url(#helixGrad2)"
-                d="
-                  M 0 260
-                  C 200 170, 420 360, 640 250
-                  C 880 180, 1100 340, 1320 280
-                  C 1360 270, 1385 295, 1400 290
-                "
-              />
-              <path
-                className="dna-helix-backbone dna-helix-backbone-2"
-                stroke="url(#helixGrad2)"
-                d="
-                  M 0 295
-                  C 200 390, 420 200, 640 295
-                  C 880 390, 1100 210, 1320 310
-                  C 1360 335, 1385 285, 1400 305
-                "
-              />
-            </g>
-
-            {/* THIRD HELIX LAYER */}
-            <g className="dna-layer dna-layer-3">
-              <path
-                className="dna-helix-backbone dna-helix-backbone-3"
-                stroke="url(#helixGrad3)"
-                d="
-                  M 0 380
-                  C 210 290, 430 470, 650 365
-                  C 900 280, 1130 450, 1350 390
-                  C 1380 380, 1395 400, 1400 395
-                "
-              />
-              <path
-                className="dna-helix-backbone dna-helix-backbone-3"
-                stroke="url(#helixGrad3)"
-                d="
-                  M 0 415
-                  C 210 510, 430 320, 650 415
-                  C 900 510, 1130 330, 1350 420
-                  C 1380 435, 1395 385, 1400 410
-                "
-              />
-            </g>
-
-            {/* LOWER, MORE ABSTRACT LAYER 1 */}
-            <g className="dna-layer dna-layer-4">
-              <path
-                className="dna-helix-backbone dna-helix-backbone-2"
-                stroke="url(#helixGrad2)"
-                d="
-                  M 0 520
-                  C 240 430, 460 610, 690 500
-                  C 940 400, 1180 580, 1360 520
-                  C 1385 510, 1395 535, 1400 530
-                "
-              />
-            </g>
-
-            {/* LOWER, MORE ABSTRACT LAYER 2 */}
-            <g className="dna-layer dna-layer-3">
-              <path
-                className="dna-helix-backbone dna-helix-backbone-1"
-                stroke="url(#helixGrad1)"
-                d="
-                  M 0 630
-                  C 260 560, 500 720, 760 610
-                  C 1020 510, 1240 690, 1380 640
-                  C 1395 635, 1400 645, 1400 650
-                "
-              />
-            </g>
-          </svg>
-        </div>
-
-        {/* Glassy header with NEW logo + navigation */}
+        {/* Clean header with logo + navigation */}
         <header>
           <div className="container">
             <div
@@ -204,12 +55,53 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </header>
 
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
 
         <footer>
           <div className="container">
-            Microbiology theme · Swammerdam Institute of Life Sciences (SILS),
-            University of Amsterdam
+            <div className="footer-grid">
+              <div className="footer-column">
+                <h4>Microbiology Theme</h4>
+                <p>
+                  Swammerdam Institute for Life Sciences (SILS)
+                  <br />
+                  University of Amsterdam
+                </p>
+              </div>
+
+              <div className="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/about">About</Link></li>
+                  <li><Link href="/research-groups">Research Groups</Link></li>
+                  <li><Link href="/people">People</Link></li>
+                  <li><Link href="/contact">Contact</Link></li>
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h4>Research</h4>
+                <ul>
+                  <li><Link href="/research-groups#microbial-food-safety">Microbial Food Safety</Link></li>
+                  <li><Link href="/research-groups#bacterial-cell-biology">Bacterial Cell Biology</Link></li>
+                  <li><Link href="/research-groups#microbiome-engineering">Microbiome Engineering</Link></li>
+                  <li><Link href="/research-groups#mass-spectrometry">Mass Spectrometry</Link></li>
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                  <li><a href="https://www.uva.nl/en/about-the-uva/organisation/faculties/faculty-of-science/faculty-of-science.html" target="_blank" rel="noopener noreferrer">UvA Faculty of Science</a></li>
+                  <li><a href="https://sils.uva.nl" target="_blank" rel="noopener noreferrer">SILS Website</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="footer-bottom">
+              &copy; {new Date().getFullYear()} University of Amsterdam. All rights reserved.
+            </div>
           </div>
         </footer>
       </body>

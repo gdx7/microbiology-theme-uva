@@ -29,23 +29,24 @@ export default function PeoplePage() {
         </p>
 
         {/* 3-column card grid on desktop, 1–2 cols on smaller screens via .people-grid in globals.css */}
-        <div className="grid people-grid" style={{ marginTop: "1.4rem" }}>
+        <div className="grid people-grid">
           {pis.map((pi, idx) => (
             <article key={`${pi.name}-${idx}`} className="card">
-              <h3>{pi.name}</h3>
+              <h3 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>{pi.name}</h3>
               <p
                 style={{
-                  marginTop: "0.15rem",
-                  fontSize: "0.86rem",
-                  color: "#64748b",
+                  fontSize: "0.9375rem",
+                  color: "var(--text-muted)",
+                  marginBottom: "0.5rem",
                 }}
               >
                 {pi.role}
               </p>
               <p
                 style={{
-                  marginTop: "0.45rem",
-                  fontSize: "0.9rem",
+                  fontSize: "1rem",
+                  color: "var(--text-soft)",
+                  marginBottom: "0.75rem",
                 }}
               >
                 {pi.group}
@@ -53,12 +54,11 @@ export default function PeoplePage() {
               {pi.email && (
                 <p
                   style={{
-                    marginTop: "0.4rem",
-                    fontSize: "0.86rem",
+                    fontSize: "0.9375rem",
                     wordBreak: "break-word",
                   }}
                 >
-                  <a href={`mailto:${pi.email}`}>{pi.email}</a>
+                  <a href={`mailto:${pi.email}`} style={{ fontWeight: 500 }}>{pi.email}</a>
                 </p>
               )}
             </article>
