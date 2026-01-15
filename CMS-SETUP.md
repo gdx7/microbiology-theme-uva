@@ -27,25 +27,38 @@ To enable GitHub authentication, you need to create a GitHub OAuth App:
 
 1. Go to GitHub.com and sign in
 2. Navigate to **Settings** → **Developer settings** → **OAuth Apps**
+   - Direct link: https://github.com/settings/developers
 3. Click **"New OAuth App"**
 4. Fill in the details:
    - **Application name**: `Microbiology Theme CMS`
-   - **Homepage URL**: `https://your-vercel-domain.vercel.app`
+   - **Homepage URL**: `https://microbiology-theme-uva.vercel.app`
    - **Authorization callback URL**: `https://api.netlify.com/auth/done`
+
+   ⚠️ **IMPORTANT:** The callback URL MUST be exactly `https://api.netlify.com/auth/done` even though you're hosting on Vercel. This is because Decap CMS uses Netlify's OAuth service as an authentication gateway.
+
 5. Click **"Register application"**
-6. Copy the **Client ID** and **Client Secret**
+6. You'll see your new OAuth app. Copy the **Client ID**
+7. Click **"Generate a new client secret"**
+8. Copy the **Client Secret** immediately (you won't be able to see it again!)
 
 ### Step 2: Set Up Netlify OAuth Gateway
 
-Decap CMS uses Netlify's OAuth service (free for GitHub auth):
+Decap CMS uses Netlify's OAuth service (free for GitHub auth), even when your site is hosted elsewhere:
 
 1. Go to [app.netlify.com](https://app.netlify.com)
-2. Sign up or sign in
-3. Go to **User Settings** → **Applications** → **OAuth**
-4. Click **"Install provider"**
-5. Select **GitHub**
-6. Paste your **Client ID** and **Client Secret** from Step 1
-7. Click **"Install"**
+2. Sign up or sign in with your GitHub account
+3. Click on your **profile picture** (top right)
+4. Select **"User settings"**
+5. In the left sidebar, scroll down to find **"OAuth"** under the "Applications" section
+
+   ⚠️ **Don't confuse this with "OAuth applications"!** You want the "OAuth" section that says "Install authentication providers".
+
+6. Click **"Install provider"**
+7. From the dropdown, select **"GitHub"**
+8. Paste your **Client ID** and **Client Secret** from Step 1
+9. Click **"Install"**
+
+**That's it!** The authentication is now configured and will work with your Vercel-hosted site.
 
 ### Alternative: Use Vercel with GitHub OAuth (Simpler)
 

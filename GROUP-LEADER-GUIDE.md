@@ -31,6 +31,8 @@ You can edit your research group page, add team members with photos, and post ne
 
 Gaurav will add you as a collaborator. You'll receive an email invitation - click "Accept invitation."
 
+**Note:** The first time you log in, you may need to authorize the application. This is normal and safe - it just allows the CMS to save your changes to GitHub.
+
 ---
 
 ## Part 2: Logging Into the Content Editor
