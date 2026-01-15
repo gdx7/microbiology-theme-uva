@@ -1,7 +1,13 @@
 backend:
-  name: github
-  repo: gdx7/microbiology-theme-uva
-  branch: main
+  name: test-repo
+
+# Using test-repo for now - this allows you to test the CMS interface
+# without authentication. Changes are NOT saved to GitHub.
+# Once we get OAuth working, we'll switch back to:
+# backend:
+#   name: github
+#   repo: gdx7/microbiology-theme-uva
+#   branch: main
 
 # For local development, uncomment this:
 # local_backend: true
