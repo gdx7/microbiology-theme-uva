@@ -1,26 +1,12 @@
 // app/research-groups/page.tsx
 import Link from "next/link";
 import { researchAreas } from "@/data/researchAreas";
-import { researchGroups } from "@/data/researchGroups";
+import { getAllResearchGroups } from "@/lib/markdown";
 
 export default function ResearchGroupsPage() {
   const areas = researchAreas as any[];
-  const groups = researchGroups as any[];
-
-  // Slugs that have internal pages at /research-groups/<slug>
-  const internalSlugs = new Set([
-    "zhang",
-    "wortel",
-    "brul",
-    "postma",
-    "branco-dos-santos",
-    "drna",
-    "hamoen",
-    "el-aidy",
-    "kramer",
-    "verhoef",
-    "schyns",
-  ]);
+  // Get all groups from markdown files
+  const groups = getAllResearchGroups();
 
   return (
     <section className="section">
@@ -50,8 +36,7 @@ export default function ResearchGroupsPage() {
 
               <div className="grid">
                 {areaGroups.map((group: any) => {
-                  const hasInternal = internalSlugs.has(group.slug);
-
+                  // All groups now have internal pages via markdown
                   return (
                     <article
                       key={group.slug}
@@ -59,21 +44,9 @@ export default function ResearchGroupsPage() {
                     >
                       <div>
                         <h3>
-                          {hasInternal ? (
-                            <Link href={`/research-groups/${group.slug}`}>
-                              {group.name}
-                            </Link>
-                          ) : group.externalUrl ? (
-                            <a
-                              href={group.externalUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {group.name}
-                            </a>
-                          ) : (
-                            group.name
-                          )}
+                          <Link href={`/research-groups/${group.slug}`}>
+                            {group.name}
+                          </Link>
                         </h3>
 
                         {group.pi && (
@@ -83,30 +56,19 @@ export default function ResearchGroupsPage() {
                         )}
 
                         <p>
-                          {group.highlight ||
+                          {group.shortDescription ||
                             group.description ||
                             "Research on microbiology and related themes at SILS."}
                         </p>
 
-                        {/* Optional helper link row */}
+                        {/* Link to internal page */}
                         <div style={{ marginTop: "1.5rem" }}>
-                          {hasInternal ? (
-                            <Link
-                              href={`/research-groups/${group.slug}`}
-                              className="card-link"
-                            >
-                              View group page →
-                            </Link>
-                          ) : group.externalUrl ? (
-                            <a
-                              href={group.externalUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="card-link"
-                            >
-                              Visit external site →
-                            </a>
-                          ) : null}
+                          <Link
+                            href={`/research-groups/${group.slug}`}
+                            className="card-link"
+                          >
+                            View group page →
+                          </Link>
                         </div>
                       </div>
                     </article>
