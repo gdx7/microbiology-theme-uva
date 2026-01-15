@@ -1,13 +1,10 @@
 backend:
-  name: test-repo
+  name: git-gateway
+  branch: main
 
-# Using test-repo for now - this allows you to test the CMS interface
-# without authentication. Changes are NOT saved to GitHub.
-# Once we get OAuth working, we'll switch back to:
-# backend:
-#   name: github
-#   repo: gdx7/microbiology-theme-uva
-#   branch: main
+# Using git-gateway with Netlify Identity
+# This works even though the site is hosted on Vercel
+# Authentication is handled by Netlify's free Identity service
 
 # For local development, uncomment this:
 # local_backend: true
