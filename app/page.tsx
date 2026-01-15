@@ -110,21 +110,24 @@ export default function Home() {
                   case 'bacterial-cell-biology':
                     return (
                       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 8v8"/>
-                        <path d="M8 12h8"/>
-                        <circle cx="12" cy="12" r="3"/>
+                        <ellipse cx="12" cy="12" rx="7" ry="10"/>
+                        <path d="M12 2v20"/>
+                        <path d="M5.5 9c1.5-1 4-1.5 6.5-1.5s5 .5 6.5 1.5"/>
+                        <path d="M5.5 15c1.5 1 4 1.5 6.5 1.5s5-.5 6.5-1.5"/>
                       </svg>
                     );
                   case 'microbiome-engineering':
                     return (
                       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
-                        <path d="M8.5 8.5v.01"/>
-                        <path d="M16 15.5v.01"/>
-                        <path d="M12 12v.01"/>
-                        <path d="M11 17v.01"/>
-                        <path d="M7 14v.01"/>
+                        <circle cx="7" cy="7" r="3"/>
+                        <circle cx="17" cy="7" r="3"/>
+                        <circle cx="7" cy="17" r="3"/>
+                        <circle cx="17" cy="17" r="3"/>
+                        <circle cx="12" cy="12" r="2"/>
+                        <path d="M9.5 8.5l2 2"/>
+                        <path d="M14.5 8.5l-2 2"/>
+                        <path d="M9.5 15.5l2-2"/>
+                        <path d="M14.5 15.5l-2-2"/>
                       </svg>
                     );
                   case 'cross-theme-expertise':

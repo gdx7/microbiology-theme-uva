@@ -59,31 +59,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <footer>
           <div className="container">
-            <div className="footer-grid">
-              <div className="footer-column">
-                <h4>Microbiology Theme</h4>
-                <p>
-                  University of Amsterdam
-                </p>
-              </div>
-
-              <div className="footer-column">
-                <h4>Quick Links</h4>
-                <ul>
-                  <li><Link href="/">Home</Link></li>
-                  <li><Link href="/about">About</Link></li>
-                  <li><Link href="/research-groups">Research Groups</Link></li>
-                  <li><Link href="/people">People</Link></li>
-                  <li><Link href="/contact">Contact</Link></li>
-                </ul>
-              </div>
-
-              <div className="footer-column">
-                <h4>Connect</h4>
-                <ul>
-                  <li><a href="https://www.uva.nl/en/about-the-uva/organisation/faculties/faculty-of-science/faculty-of-science.html" target="_blank" rel="noopener noreferrer">UvA Faculty of Science</a></li>
-                  <li><a href="https://sils.uva.nl" target="_blank" rel="noopener noreferrer">SILS Website</a></li>
-                </ul>
+            <div className="footer-simple">
+              <div className="footer-links">
+                <a href="https://www.uva.nl/en/about-the-uva/organisation/faculties/faculty-of-science/faculty-of-science.html" target="_blank" rel="noopener noreferrer">UvA Faculty of Science</a>
+                <span className="footer-divider">|</span>
+                <a href="https://sils.uva.nl" target="_blank" rel="noopener noreferrer">SILS Website</a>
               </div>
             </div>
 
