@@ -47,6 +47,12 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // Decap CMS expects the token in a specific format
+    const authResponse = {
+      token: tokenData.access_token,
+      provider: 'github'
+    };
+
     // Return success page that sends message to CMS
     const html = `
 <!DOCTYPE html>
@@ -97,7 +103,7 @@ export async function GET(request: NextRequest) {
       function receiveMessage(e) {
         console.log("receiveMessage %o", e);
         window.opener.postMessage(
-          'authorization:github:success:${JSON.stringify(tokenData).replace(/'/g, "\\'")}',
+          'authorization:github:success:${JSON.stringify(authResponse).replace(/'/g, "\\'")}',
           e.origin
         );
         window.removeEventListener("message", receiveMessage, false);
