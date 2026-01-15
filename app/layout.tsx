@@ -79,17 +79,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </div>
 
               <div className="footer-column">
-                <h4>Research</h4>
-                <ul>
-                  <li><Link href="/research-groups#molecular-biology-microbial-food-safety">MBMFS</Link></li>
-                  <li><Link href="/research-groups#bacterial-cell-biology">BCBP</Link></li>
-                  <li><Link href="/research-groups#microbiome-engineering">Microbiome Engineering</Link></li>
-                  <li><Link href="/research-groups#core-facilities">Core Facilities</Link></li>
-                  <li><Link href="/research-groups#cross-theme-expertise">Cross-theme Expertise</Link></li>
-                </ul>
-              </div>
-
-              <div className="footer-column">
                 <h4>Connect</h4>
                 <ul>
                   <li><a href="https://www.uva.nl/en/about-the-uva/organisation/faculties/faculty-of-science/faculty-of-science.html" target="_blank" rel="noopener noreferrer">UvA Faculty of Science</a></li>
