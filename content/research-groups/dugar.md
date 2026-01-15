@@ -7,8 +7,10 @@ pi: Dr. Gaurav Dugar
 role: Principal Investigator
 contactEmail: g.dugar@uva.nl
 shortDescription: Investigating RNA-mediated gene regulation in bacteria
-description: |
-  Our research focuses on understanding RNA-based regulatory mechanisms in bacteria, particularly how small RNAs and riboswitches control gene expression in response to environmental changes.
+description: >
+  Our research focuses on understanding RNA-based regulatory mechanisms in
+  bacteria, particularly how small RNAs and riboswitches control gene expression
+  in response to environmental changes.
 researchFocus:
   - Small RNA regulation
   - Riboregulation
@@ -19,4 +21,9 @@ keywords:
   - RNA biology
   - Gene regulation
   - Bacterial genetics
+publications:
+  - title: Comprehensive architecture of the bacterial RNA interactome
+    authors: GAurav dugar
+    journal: biorxiv
+    year: 2025
 ---
