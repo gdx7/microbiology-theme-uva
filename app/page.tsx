@@ -8,12 +8,10 @@ export default function Home() {
   const groups = researchGroups as any[];
   const areas = researchAreas as any[];
 
-  const groupCount = groups.length;
-
   const stats = [
-    { label: "Research groups", value: `${groupCount}` },
-    { label: "Upcoming seminars", value: "AMSA · AMEC" },
-    { label: "Latest publications", value: "Theme highlights" },
+    { label: "News", value: "", href: "/news" },
+    { label: "Upcoming seminars", value: "", href: "/seminars" },
+    { label: "Latest publications", value: "", href: "/publications" },
   ];
 
   return (
@@ -47,10 +45,10 @@ export default function Home() {
 
             <div className="stats-strip stats-strip-home">
               {stats.map((s) => (
-                <div key={s.label} className="stat-card">
+                <a key={s.label} href={s.href} className="stat-card stat-card-clickable">
                   <div className="stat-label">{s.label}</div>
-                  <div className="stat-value">{s.value}</div>
-                </div>
+                  <div className="stat-value">{s.value || "→"}</div>
+                </a>
               ))}
             </div>
           </div>

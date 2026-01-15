@@ -358,6 +358,16 @@ h2.section-title {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
 }
 
+.stat-card-clickable {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.stat-card-clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
 .stat-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);

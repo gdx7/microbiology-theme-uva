@@ -63,8 +63,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <div className="footer-column">
                 <h4>Microbiology Theme</h4>
                 <p>
-                  Swammerdam Institute for Life Sciences (SILS)
-                  <br />
                   University of Amsterdam
                 </p>
               </div>
@@ -101,7 +99,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
 
             <div className="footer-bottom">
-              &copy; {new Date().getFullYear()} University of Amsterdam. All rights reserved.
+              Designed by Gaurav, Claude AI and Gemini | &copy; {new Date().getFullYear()} University of Amsterdam. All rights reserved.
             </div>
           </div>
         </footer>

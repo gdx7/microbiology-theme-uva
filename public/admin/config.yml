@@ -95,3 +95,36 @@ collections:
       - { label: "Website", name: "website", widget: "string", required: false }
       - { label: "ORCID", name: "orcid", widget: "string", required: false }
       - { label: "Google Scholar", name: "googleScholar", widget: "string", required: false }
+
+  # Seminars
+  - name: "seminars"
+    label: "Seminars"
+    folder: "content/seminars"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Seminar title" }
+      - { label: "Date", name: "date", widget: "datetime", hint: "Date and time of the seminar" }
+      - { label: "Time", name: "time", widget: "string", required: false, hint: "e.g., '14:00-15:00' (if not in Date field)" }
+      - { label: "Speaker", name: "speaker", widget: "string", hint: "Speaker name" }
+      - { label: "Affiliation", name: "affiliation", widget: "string", required: false, hint: "Speaker's institution" }
+      - { label: "Location", name: "location", widget: "string", required: false, hint: "Room/building" }
+      - { label: "Description", name: "description", widget: "text", required: false, hint: "Short description of the talk" }
+      - { label: "Link", name: "link", widget: "string", required: false, hint: "Link to more information or registration" }
+
+  # Publications
+  - name: "publications"
+    label: "Publications"
+    folder: "content/publications"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Authors", name: "authors", widget: "string", hint: "All authors, e.g., 'Smith J, Jones A, Zhang L'" }
+      - { label: "Journal", name: "journal", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "DOI", name: "doi", widget: "string", required: false, hint: "e.g., '10.1038/s41586-021-03819-2'" }
+      - { label: "Link", name: "link", widget: "string", required: false, hint: "Direct link to paper" }
+      - { label: "Abstract", name: "abstract", widget: "text", required: false, hint: "Brief abstract or summary" }
+      - { label: "Research Group", name: "groupSlug", widget: "string", required: false, hint: "Group slug (e.g., 'zhang', 'wortel')" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Show as featured publication" }
