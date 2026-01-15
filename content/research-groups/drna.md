@@ -58,12 +58,13 @@ teamMembers:
   - name: Gaurav Dugar
     role: Group leader
     email: G.Dugar@uva.nl
-    photo: /images/uploads/scientist.png
+    photo: /images/uploads/gd_pic.jpg
   - name: Daphne Denaijere
     role: Research technician
     photo: /images/uploads/daphne-denaijere-picture-drna-lab-website.jpg
   - name: Emma Bouvy
     role: Research Analyst
+    photo: /images/uploads/gemini_generated_image_kwizklkwizklkwiz.png
 publications:
   - title: Genetic adaptation to amoxicillin in Escherichia coli
     authors: Teichmann L, Wenne M, Luitwieler S, Dugar G, et al.
