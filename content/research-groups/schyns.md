@@ -2,7 +2,7 @@
 slug: schyns
 name: Peribiomics Lab
 code: PBL
-areaSlug: microbiome-engineering
+areaSlug: cross-theme-expertise
 pi: Prof. Dr. Ghislain R.L.J. Schyns
 role: Professor by special appointment of Industrial Molecular Microbiology
 contactEmail: g.r.l.j.schyns@uva.nl

@@ -2,7 +2,7 @@
 slug: verhoef
 name: Microbial Food Safety Chair
 code: NVWA
-areaSlug: molecular-biology-microbial-food-safety
+areaSlug: cross-theme-expertise
 pi: Prof. Dr. Ir. Linda Verhoef
 role: Professor by Special Appointment
 contactEmail: l.p.b.verhoef@uva.nl

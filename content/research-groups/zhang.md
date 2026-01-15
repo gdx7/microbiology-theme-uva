@@ -1,8 +1,8 @@
 ---
 slug: zhang
-name: Gumi Lab – Microbiome–Host Interfaces
+name: Gumi Lab
 code: Gumi
-areaSlug: microbiome-engineering
+areaSlug: molecular-biology-microbial-food-safety
 pi: Dr. Jianbo Zhang
 role: Group leader
 contactEmail: j.zhang6@uva.nl
