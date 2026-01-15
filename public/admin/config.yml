@@ -35,7 +35,11 @@ collections:
       - { label: "Contact Email", name: "contactEmail", widget: "string", required: false }
       - { label: "External URL", name: "externalUrl", widget: "string", required: false }
       - { label: "Short Description", name: "shortDescription", widget: "text", hint: "Brief one-liner for cards" }
-      - { label: "Full Description", name: "description", widget: "markdown" }
+      - { label: "Full Description (Lead)", name: "description", widget: "markdown", hint: "Main intro paragraph" }
+      - { label: "What We Do", name: "whatWeDo", widget: "markdown", required: false, hint: "Detailed description of research focus" }
+      - { label: "How We Do It - Experimental", name: "howWeDoItExperimental", widget: "markdown", required: false }
+      - { label: "How We Do It - Computational", name: "howWeDoItComputational", widget: "markdown", required: false }
+      - { label: "Lab Culture", name: "labCulture", widget: "markdown", required: false }
       - { label: "Research Focus Areas", name: "researchFocus", widget: "list", required: false }
       - { label: "Keywords", name: "keywords", widget: "list", required: false }
       - label: "Team Members"

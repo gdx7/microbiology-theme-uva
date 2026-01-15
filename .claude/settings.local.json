@@ -11,7 +11,9 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd comprehensive non-technical user guide for group leaders\n\nCreated GROUP-LEADER-GUIDE.md with step-by-step instructions for:\n- Setting up GitHub account\n- Logging into the CMS\n- Editing research group pages\n- Adding team members with photos\n- Managing publications\n- Posting news items\n- Best practices and troubleshooting\n\nWritten in plain language with no technical jargon - designed for\nusers with zero coding experience. Includes visual formatting,\nquick reference cheat sheet, and common Q&A.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(npm run dev:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate CMS documentation with correct OAuth setup\n\n- Clarified that Netlify OAuth gateway works with Vercel hosting\n- Added specific instructions to find correct OAuth section in Netlify\n- Emphasized callback URL must be api.netlify.com/auth/done\n- Added warning notes to prevent common confusion points\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   }
 }
