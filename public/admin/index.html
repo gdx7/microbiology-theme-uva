@@ -23,13 +23,12 @@
     <!-- Include the Decap CMS script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-    <!-- Initialize Netlify Identity with custom site URL -->
+    <!-- Initialize Netlify Identity -->
     <script>
       if (window.netlifyIdentity) {
-        // This tells the widget to use the Netlify site API endpoint
-        window.netlifyIdentity.init({
-          APIUrl: "https://vermillion-pegasus-259ec6.netlify.app/.netlify/identity"
-        });
+        // Identity widget will use the local /.netlify/identity endpoint
+        // which is proxied to the Netlify site via API routes
+        window.netlifyIdentity.init();
       }
     </script>
   </body>
