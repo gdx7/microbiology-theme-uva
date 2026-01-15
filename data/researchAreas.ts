@@ -30,10 +30,17 @@ export const researchAreas: ResearchArea[] = [
       "Cluster led by Prof. Sahar El Aidy focusing on human and industrial microbiomes, engineering microbial communities and leveraging microbiome insights for health and biotechnology applications.",
   },
   {
+    slug: "core-facilities",
+    code: "CF",
+    title: "Core Facilities",
+    description:
+      "State-of-the-art core facilities providing essential research infrastructure and expertise in mass spectrometry, proteomics, metabolomics, and other advanced analytical techniques to support microbiology research across all themes.",
+  },
+  {
     slug: "cross-theme-expertise",
     code: "CTE",
     title: "Cross-theme expertise & endowed chairs",
     description:
-      "Cross-cutting expertise and endowed chairs that support food safety, industrial biotechnology and mass-spectrometry-driven omics across all microbiology research pillars.",
+      "Cross-cutting expertise and endowed chairs that support food safety, industrial biotechnology, and microbiome research across all microbiology research pillars.",
   },
 ];

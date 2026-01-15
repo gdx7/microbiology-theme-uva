@@ -193,11 +193,11 @@ export const researchGroups: ResearchGroup[] = [
   },
 
   // =========
-  // Cross-theme expertise & endowed chairs
+  // Core Facilities
   // =========
   {
     slug: "kramer", // was: mass-spectrometry-of-biomolecules
-    areaSlug: "cross-theme-expertise",
+    areaSlug: "core-facilities",
     name: "Mass Spectrometry of Biomolecules (MSB)",
     code: "MSB",
     pi: "Dr. Gertjan Kramer",
@@ -205,7 +205,7 @@ export const researchGroups: ResearchGroup[] = [
     shortDescription:
       "Institute-wide mass spectrometry core, supporting microbial omics and quantitative biomolecular analysis.",
     description:
-      "The Mass Spectrometry of Biomolecules group functions as the institute’s mass spectrometry core, supporting microbial omics, quantitative proteomics and metabolomics across the Microbiology Theme and other SILS programs.",
+      "The Mass Spectrometry of Biomolecules group functions as the institute's mass spectrometry core, supporting microbial omics, quantitative proteomics and metabolomics across the Microbiology Theme and other SILS programs.",
     keywords: [
       "mass spectrometry",
       "omics",
@@ -215,6 +215,10 @@ export const researchGroups: ResearchGroup[] = [
       "RS3",
     ],
   },
+
+  // =========
+  // Cross-theme expertise & endowed chairs
+  // =========
   {
     slug: "verhoef", // was: nvwa-chair-microbial-food-safety
     areaSlug: "cross-theme-expertise",

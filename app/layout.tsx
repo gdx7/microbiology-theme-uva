@@ -86,6 +86,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <li><Link href="/research-groups#molecular-biology-microbial-food-safety">MBMFS</Link></li>
                   <li><Link href="/research-groups#bacterial-cell-biology">BCBP</Link></li>
                   <li><Link href="/research-groups#microbiome-engineering">Microbiome Engineering</Link></li>
+                  <li><Link href="/research-groups#core-facilities">Core Facilities</Link></li>
                   <li><Link href="/research-groups#cross-theme-expertise">Cross-theme Expertise</Link></li>
                 </ul>
               </div>
