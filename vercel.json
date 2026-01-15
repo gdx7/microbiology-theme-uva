@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/.netlify/identity/:path*",
-      "destination": "https://vermillion-pegasus-259ec6.netlify.app/.netlify/identity/:path*"
+      "destination": "/api/.netlify/identity/:path*"
     },
     {
       "source": "/.netlify/git/:path*",
