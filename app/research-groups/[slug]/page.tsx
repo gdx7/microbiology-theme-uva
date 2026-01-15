@@ -140,6 +140,20 @@ export default async function ResearchGroupPage({ params }: PageProps) {
             <div className="grid people-grid" style={{ marginTop: "1rem" }}>
               {group.teamMembers.map((member, index) => (
                 <article key={index} className="card">
+                  {member.photo && (
+                    <div style={{ marginBottom: "0.8rem" }}>
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxWidth: "200px",
+                          borderRadius: "8px",
+                        }}
+                      />
+                    </div>
+                  )}
                   <h3>{member.name}</h3>
                   <p
                     style={{
