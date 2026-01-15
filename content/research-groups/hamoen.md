@@ -1,6 +1,6 @@
 ---
 slug: hamoen
-name: Bacterial Cell Biology & Physiology Group
+name: Bacterial Cell Biology
 code: BCB
 areaSlug: bacterial-cell-biology
 pi: Prof. Dr. Leendert W. Hamoen

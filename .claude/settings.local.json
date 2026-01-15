@@ -13,7 +13,8 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate CMS documentation with correct OAuth setup\n\n- Clarified that Netlify OAuth gateway works with Vercel hosting\n- Added specific instructions to find correct OAuth section in Netlify\n- Emphasized callback URL must be api.netlify.com/auth/done\n- Added warning notes to prevent common confusion points\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit:*)",
       "Bash(git pull:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(git rm:*)"
     ]
   }
 }
