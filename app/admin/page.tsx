@@ -5,19 +5,20 @@ import { useEffect } from "react";
 
 export default function AdminPage() {
   useEffect(() => {
-    // Dynamically import Decap CMS only on client side
-    const initCMS = async () => {
-      const CMS = await import("decap-cms-app");
-      // CMS is now initialized
-      CMS.init();
-    };
-
-    initCMS();
+    // Redirect to the standalone admin page
+    window.location.href = "/admin/index.html";
   }, []);
 
   return (
-    <div>
-      {/* Decap CMS will render into the body */}
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      minHeight: "100vh",
+      fontSize: "1.125rem",
+      color: "#64748b"
+    }}>
+      Redirecting to CMS...
     </div>
   );
 }
