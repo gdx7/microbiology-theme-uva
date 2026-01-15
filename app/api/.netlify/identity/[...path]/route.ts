@@ -5,8 +5,9 @@ const NETLIFY_SITE = 'https://vermillion-pegasus-259ec6.netlify.app';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: { params: Promise<{ path: string[] }> }
 ) {
+  const params = await context.params;
   const path = params.path?.join('/') || '';
   const url = `${NETLIFY_SITE}/.netlify/identity/${path}`;
 
@@ -34,8 +35,9 @@ export async function GET(
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: { params: Promise<{ path: string[] }> }
 ) {
+  const params = await context.params;
   const path = params.path?.join('/') || '';
   const url = `${NETLIFY_SITE}/.netlify/identity/${path}`;
   const body = await request.text();
@@ -65,8 +67,9 @@ export async function POST(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: { params: Promise<{ path: string[] }> }
 ) {
+  const params = await context.params;
   const path = params.path?.join('/') || '';
   const url = `${NETLIFY_SITE}/.netlify/identity/${path}`;
   const body = await request.text();
