@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/.netlify/identity/:path*",
+      "destination": "https://vermillion-pegasus-259ec6.netlify.app/.netlify/identity/:path*"
+    },
+    {
+      "source": "/.netlify/git/:path*",
+      "destination": "https://vermillion-pegasus-259ec6.netlify.app/.netlify/git/:path*"
+    }
+  ]
+}
