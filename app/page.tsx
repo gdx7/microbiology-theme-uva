@@ -47,7 +47,6 @@ export default function Home() {
               {stats.map((s) => (
                 <a key={s.label} href={s.href} className="stat-card stat-card-clickable">
                   <div className="stat-label">{s.label}</div>
-                  <div className="stat-value">{s.value || "→"}</div>
                 </a>
               ))}
             </div>

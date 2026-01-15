@@ -345,7 +345,7 @@ h2.section-title {
 }
 
 .stat-card {
-  padding: 1.5rem 1.75rem;
+  padding: 1rem 1.5rem;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.9);
   color: var(--text-main);
