@@ -61,6 +61,7 @@ teamMembers:
     photo: /images/uploads/scientist.png
   - name: Daphne Denaijere
     role: Research technician
+    photo: /images/uploads/daphne-denaijere-picture-drna-lab-website.jpg
   - name: Emma Bouvy
     role: Research Analyst
 publications:
