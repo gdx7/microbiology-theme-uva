@@ -95,19 +95,75 @@ export default function Home() {
           </p>
 
           <div className="research-areas-list">
-            {areas.map((area: any) => (
-              <a
-                key={area.slug}
-                href={`/research-groups#${area.slug}`}
-                className="card"
-              >
-                <h3>{area.title}</h3>
-                <p>{area.description}</p>
-                <span className="research-area-link">
-                  View groups in this area →
-                </span>
-              </a>
-            ))}
+            {areas.map((area: any) => {
+              // Define icon for each research area
+              const getIcon = (slug: string) => {
+                switch(slug) {
+                  case 'molecular-biology-microbial-food-safety':
+                    return (
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/>
+                        <path d="M8.5 2h7"/>
+                        <path d="M7 16h10"/>
+                      </svg>
+                    );
+                  case 'bacterial-cell-biology':
+                    return (
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 8v8"/>
+                        <path d="M8 12h8"/>
+                        <circle cx="12" cy="12" r="3"/>
+                      </svg>
+                    );
+                  case 'microbiome-engineering':
+                    return (
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                        <path d="M8.5 8.5v.01"/>
+                        <path d="M16 15.5v.01"/>
+                        <path d="M12 12v.01"/>
+                        <path d="M11 17v.01"/>
+                        <path d="M7 14v.01"/>
+                      </svg>
+                    );
+                  case 'cross-theme-expertise':
+                    return (
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                      </svg>
+                    );
+                  case 'core-facilities':
+                    return (
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                      </svg>
+                    );
+                  default:
+                    return null;
+                }
+              };
+
+              return (
+                <a
+                  key={area.slug}
+                  href={`/research-groups#${area.slug}`}
+                  className="card research-area-card"
+                >
+                  <div className="research-area-icon">
+                    {getIcon(area.slug)}
+                  </div>
+                  <div className="research-area-content">
+                    <h3>{area.title}</h3>
+                    <p>{area.description}</p>
+                    <span className="research-area-link">
+                      View groups in this area →
+                    </span>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>

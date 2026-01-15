@@ -587,16 +587,94 @@ h2.section-title {
   gap: 1.5rem;
 }
 
-.research-areas-list .card {
+.research-area-card {
   cursor: pointer;
   border-left: 4px solid transparent;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-.research-areas-list .card:hover {
+.research-area-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(139, 92, 246, 0.05) 100%);
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.research-area-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.research-area-card:hover {
   transform: translateX(8px);
   border-left-color: var(--primary);
   box-shadow: var(--shadow-xl);
+}
+
+.research-area-card:hover .research-area-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-purple) 100%);
+  color: white;
+}
+
+/* Color variants for different research areas */
+.research-area-card:nth-child(1) .research-area-icon {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+  color: var(--primary);
+}
+
+.research-area-card:nth-child(2) .research-area-icon {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(20, 184, 166, 0.05) 100%);
+  color: var(--accent-teal);
+}
+
+.research-area-card:nth-child(3) .research-area-icon {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+  color: var(--accent-purple);
+}
+
+.research-area-card:nth-child(4) .research-area-icon {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
+  color: var(--accent-orange);
+}
+
+.research-area-card:nth-child(5) .research-area-icon {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(236, 72, 153, 0.05) 100%);
+  color: var(--accent-pink);
+}
+
+.research-area-card:nth-child(1):hover .research-area-icon {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.research-area-card:nth-child(2):hover .research-area-icon {
+  background: linear-gradient(135deg, var(--accent-teal) 0%, #0d9488 100%);
+  color: white;
+}
+
+.research-area-card:nth-child(3):hover .research-area-icon {
+  background: linear-gradient(135deg, var(--accent-purple) 0%, #7c3aed 100%);
+  color: white;
+}
+
+.research-area-card:nth-child(4):hover .research-area-icon {
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
+  color: white;
+}
+
+.research-area-card:nth-child(5):hover .research-area-icon {
+  background: linear-gradient(135deg, var(--accent-pink) 0%, #db2777 100%);
+  color: white;
 }
 
 /* Add colorful accents for research group cards */
@@ -632,23 +710,27 @@ h2.section-title {
   border-left-color: var(--accent-pink);
 }
 
-.research-areas-list h3 {
+.research-area-content h3 {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
 
-.research-areas-list .research-area-link {
+.research-area-content p {
+  margin-bottom: 1rem;
+}
+
+.research-area-content .research-area-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--primary);
   transition: gap 0.2s ease;
 }
 
-.research-areas-list .card:hover .research-area-link {
+.research-area-card:hover .research-area-link {
   gap: 0.75rem;
 }
 
@@ -939,5 +1021,19 @@ footer .container {
 
   h1.section-title {
     font-size: 2rem;
+  }
+
+  .research-area-card {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .research-area-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .research-area-card:hover {
+    transform: translateY(-4px);
   }
 }

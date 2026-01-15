@@ -40,19 +40,41 @@ const slides: Slide[] = [
 
 export default function NewsRotator() {
   const [index, setIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const id = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % slides.length);
+        setIsTransitioning(false);
+      }, 300);
     }, 7000); // change slide every 7s
     return () => clearInterval(id);
   }, []);
 
   const current = slides[index];
 
+  const handleDotClick = (i: number) => {
+    if (i !== index) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setIndex(i);
+        setIsTransitioning(false);
+      }, 300);
+    }
+  };
+
   return (
     <div className="news-rotator">
-      <div style={{ padding: "2rem 2.5rem" }}>
+      <div
+        style={{
+          padding: "2rem 2.5rem",
+          opacity: isTransitioning ? 0 : 1,
+          transform: isTransitioning ? 'translateY(10px)' : 'translateY(0)',
+          transition: 'opacity 0.3s ease, transform 0.3s ease',
+        }}
+      >
         {current.tag && (
           <div
             style={{
@@ -125,7 +147,7 @@ export default function NewsRotator() {
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => setIndex(i)}
+            onClick={() => handleDotClick(i)}
             aria-label={`Go to slide ${i + 1}`}
             style={{
               width: i === index ? 32 : 10,
@@ -135,6 +157,16 @@ export default function NewsRotator() {
               border: "none",
               cursor: "pointer",
               transition: "all 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              if (i !== index) {
+                e.currentTarget.style.background = "var(--border-strong)";
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (i !== index) {
+                e.currentTarget.style.background = "var(--border-medium)";
+              }
             }}
           />
         ))}
