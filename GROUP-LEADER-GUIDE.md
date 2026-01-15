@@ -40,7 +40,7 @@ Gaurav will add you as a collaborator. You'll receive an email invitation - clic
 ### Step 1: Go to the Admin Page
 
 1. Open your web browser
-2. Go to: **https://microbiology-uva.vercel.app/admin**
+2. Go to: **https://microbiology-theme-uva.vercel.app/admin**
 3. You'll see a login screen
 
 ### Step 2: Log In with GitHub
@@ -69,19 +69,42 @@ You'll see a form with several fields. Here's what each one does:
 #### Basic Information:
 - **Group Name**: Your lab's name (e.g., "Gumi Lab")
 - **Group Code**: Short abbreviation (e.g., "GL")
-- **Research Area**: Choose from dropdown (e.g., "MBMFS")
+- **Research Area**: Choose from dropdown:
+  - Molecular Biology and Microbial Food Safety (MBMFS)
+  - Bacterial Cell Biology and Physiology (BCBP)
+  - Microbiome Engineering (ME)
+  - Endowed Chairs
+  - Embedded Research Core Facilities
 - **Principal Investigator**: Your name
-- **PI Role**: Your title (e.g., "Principal Investigator")
+- **PI Role**: Your title (e.g., "Principal Investigator", "Group leader")
 - **Contact Email**: Your email address
 - **External URL**: Your personal/lab website (if you have one)
 
 #### Descriptions:
-- **Short Description**: 1-2 sentences for the card view
+- **Short Description**: 1-2 sentences for the card view on the main research groups page
   - Example: "We study microbial communities using multi-omics and computational modeling."
 
-- **Full Description**: Detailed description of your research
+- **Full Description (Lead)**: Main introductory paragraph about your research
   - You can use the formatting buttons to make text **bold**, *italic*, add headers, bullet points, etc.
   - Write it like you would in Word or email
+
+- **What We Do**: Detailed description of your research focus and questions
+  - This appears as a dedicated section on your page
+  - Explain your main research interests and what problems you're trying to solve
+  - Example: "We investigate how microbes adapt to environmental stress..."
+
+- **How We Do It - Experimental**: Your experimental approaches and techniques
+  - Describe the methods, organisms, and technologies you use
+  - Example: "We use advanced microscopy, genetic manipulation, and multi-omics..."
+
+- **How We Do It - Computational**: Your computational and modeling approaches (if applicable)
+  - Describe your data analysis, modeling, and computational methods
+  - Example: "We develop machine learning models to analyze large datasets..."
+
+- **Lab Culture**: Description of your lab environment and values (optional)
+  - What's it like to work in your lab?
+  - What values are important to your team?
+  - Example: "We foster a collaborative, inclusive environment where..."
 
 #### Research Focus Areas:
 - Click **"Add Research Focus Areas"**
@@ -289,14 +312,15 @@ Click **"Publish"** at the top - your news will appear on the website!
 
 | **Task** | **Steps** |
 |----------|-----------|
-| **Login** | Go to yoursite.com/admin → Click "Login with GitHub" |
+| **Login** | Go to microbiology-theme-uva.vercel.app/admin → Click "Login with GitHub" |
 | **Edit Your Group** | Sidebar → Research Groups → Find your group → Edit → Publish |
+| **Edit Research Descriptions** | Edit group → Fill "What We Do", "How We Do It" sections → Publish |
 | **Add Team Member** | Edit group → Scroll to Team Members → Add Team Members → Fill form → Publish |
 | **Upload Photo** | Team Members section → Choose an image → Select file → Upload |
 | **Add News** | Sidebar → News → New News → Fill form → Publish |
 | **Add Publication** | Edit group → Scroll to Publications → Add Publications → Fill form → Publish |
 | **Save Without Publishing** | Click "Save" instead of "Publish" |
-| **Get Help** | Contact Gaurav Dugar (g.dugar@uva.nl) |
+| **Get Help** | Contact Gaurav Dugar (G.Dugar@uva.nl) |
 
 ---
 
@@ -309,7 +333,7 @@ Click **"Publish"** at the top - your news will appear on the website!
 3. **Check your internet connection** - Make sure you're online
 4. **Contact the Administrator**:
    - **Name**: Gaurav Dugar
-   - **Email**: g.dugar@uva.nl
+   - **Email**: G.Dugar@uva.nl
    - **Include**: Your GitHub username, what you were trying to do, and any error messages
 
 ### What to Include When Asking for Help:
@@ -342,4 +366,4 @@ We're working on creating video tutorials to make this even easier! Check back s
 ---
 
 *Last updated: January 2026*
-*Questions? Contact Gaurav Dugar (g.dugar@uva.nl)*
+*Questions? Contact Gaurav Dugar (G.Dugar@uva.nl)*
