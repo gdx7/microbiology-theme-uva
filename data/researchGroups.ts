@@ -71,9 +71,29 @@ export const researchGroups: ResearchGroup[] = [
       "RS3",
     ],
   },
+  {
+    slug: "postma",
+    areaSlug: "molecular-biology-microbial-food-safety",
+    name: "Spatial SysBio Lab",
+    code: "SSB",
+    pi: "Prof. Dr. Marten Postma",
+    role: "Principal Investigator",
+    shortDescription:
+      "Spatial systems biology studying signal transduction and cell polarity regulation in microbial systems.",
+    description:
+      "The Spatial SysBio Lab investigates spatial aspects of signal transduction and regulation using systems biology approaches, combining molecular biology, quantitative imaging and computational modeling to understand cellular organization and decision-making processes.",
+    keywords: [
+      "spatial systems biology",
+      "signal transduction",
+      "cell polarity",
+      "quantitative imaging",
+      "RS1",
+      "RS2",
+    ],
+  },
 
   // =========
-  // BCB cluster – Chair: Prof. Leendert Hamoen
+  // BCBP cluster – Chair: Prof. Leendert Hamoen
   // =========
   {
     slug: "branco-dos-santos", // was: molecular-microbial-physiology
@@ -119,14 +139,14 @@ export const researchGroups: ResearchGroup[] = [
   {
     slug: "hamoen", // was: general-microbiology-lab
     areaSlug: "bacterial-cell-biology",
-    name: "General Microbiology Lab",
-    code: "GML",
+    name: "Bacterial Cell Biology (BCB)",
+    code: "BCB",
     pi: "Prof. Dr. Leendert Hamoen",
-    role: "Chair Bacterial Cell Biology",
+    role: "Chair Bacterial Cell Biology and Physiology",
     shortDescription:
       "Fundamental bacterial cell biology and chromosome dynamics underpinning growth, stress responses and pathogenesis.",
     description:
-      "The General Microbiology Lab focuses on fundamental bacterial cell biology, including chromosome dynamics, cell-cycle control and stress responses that underpin growth, survival and pathogenic potential.",
+      "The Bacterial Cell Biology group focuses on fundamental bacterial cell biology, including chromosome dynamics, cell-cycle control and stress responses that underpin growth, survival and pathogenic potential.",
     keywords: [
       "bacterial cell biology",
       "chromosome dynamics",
@@ -215,22 +235,21 @@ export const researchGroups: ResearchGroup[] = [
     ],
   },
   {
-    slug: "industrial-molecular-microbiology-chair", // (no internal page created yet)
+    slug: "schyns",
     areaSlug: "cross-theme-expertise",
-    name:
-      "DSM-Firmenich Beta-Plus Foundation Chair of Industrial Molecular Microbiology",
-    code: "IMM",
-    pi: "Prof. Ghislain Schyns",
-    role: "Endowed chair",
+    name: "Peribiomics Lab",
+    code: "PBL",
+    pi: "Prof. Dr. Ghislain Schyns",
+    role: "Professor by special appointment of Industrial Molecular Microbiology",
     shortDescription:
-      "Endowed chair in industrial molecular microbiology, bridging academic research and biotechnology industry.",
+      "Peripheral microbiomes interactions with gut microbiomes and host, studying peribiomics axes and their networks.",
     description:
-      "This endowed chair strengthens industrial molecular microbiology, connecting the Microbiology Theme with DSM-Firmenich and broader biotechnology partners to develop sustainable microbial production platforms.",
+      "The Peribiomics Lab focuses on peripheral (skin, nasal, mouth) microbiomes interactions with gut microbiomes and host, studying the so-called axes and their network (peribiomics). We set up bilateral physiomimetical dynamic models to study molecular signals and spatial biology during the dynamic interactions.",
     keywords: [
-      "industrial microbiology",
-      "biotechnology",
-      "industry collaboration",
-      "endowed chair",
+      "peripheral microbiomes",
+      "peribiomics",
+      "host-microbe interactions",
+      "spatial biology",
       "RS1",
       "RS3",
     ],

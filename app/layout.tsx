@@ -83,10 +83,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <div className="footer-column">
                 <h4>Research</h4>
                 <ul>
-                  <li><Link href="/research-groups#microbial-food-safety">Microbial Food Safety</Link></li>
-                  <li><Link href="/research-groups#bacterial-cell-biology">Bacterial Cell Biology</Link></li>
+                  <li><Link href="/research-groups#molecular-biology-microbial-food-safety">MBMFS</Link></li>
+                  <li><Link href="/research-groups#bacterial-cell-biology">BCBP</Link></li>
                   <li><Link href="/research-groups#microbiome-engineering">Microbiome Engineering</Link></li>
-                  <li><Link href="/research-groups#mass-spectrometry">Mass Spectrometry</Link></li>
+                  <li><Link href="/research-groups#cross-theme-expertise">Cross-theme Expertise</Link></li>
                 </ul>
               </div>
 

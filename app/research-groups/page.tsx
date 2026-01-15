@@ -12,12 +12,14 @@ export default function ResearchGroupsPage() {
     "zhang",
     "wortel",
     "brul",
+    "postma",
     "branco-dos-santos",
     "drna",
     "hamoen",
     "el-aidy",
     "kramer",
     "verhoef",
+    "schyns",
   ]);
 
   return (

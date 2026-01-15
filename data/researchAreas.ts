@@ -17,8 +17,8 @@ export const researchAreas: ResearchArea[] = [
   },
   {
     slug: "bacterial-cell-biology",
-    code: "BCB",
-    title: "Bacterial Cell Biology (BCB)",
+    code: "BCBP",
+    title: "Bacterial Cell Biology and Physiology (BCBP)",
     description:
       "Cluster led by Prof. Leendert Hamoen that studies bacterial physiology, chromosome organisation and gene regulation, from fundamental mechanisms to infection biology and antimicrobial resistance.",
   },
