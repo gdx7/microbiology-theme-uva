@@ -14,10 +14,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* Netlify Identity Widget for CMS authentication */}
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-      </head>
       <body>
         {/* Skip to content link for accessibility */}
         <a href="#main-content" className="skip-to-content">

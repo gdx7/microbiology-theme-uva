@@ -4,32 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager - Microbiology Theme</title>
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      // Configure Netlify Identity to use the correct API endpoint
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
   </head>
   <body>
     <!-- Include the Decap CMS script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-    <!-- Initialize Netlify Identity -->
-    <script>
-      if (window.netlifyIdentity) {
-        // Identity widget will use the local /.netlify/identity endpoint
-        // which is proxied to the Netlify site via API routes
-        window.netlifyIdentity.init();
-      }
-    </script>
   </body>
 </html>
