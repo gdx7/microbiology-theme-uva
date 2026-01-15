@@ -2,8 +2,10 @@ backend:
   name: github
   repo: gdx7/microbiology-theme-uva
   branch: main
+  base_url: https://microbiology-theme-uva.vercel.app
+  auth_endpoint: /api/auth/github/authorize
 
-# Using GitHub backend - simpler and more reliable
+# Using GitHub backend with custom OAuth handler
 # Users authenticate with their GitHub accounts
 # Just add collaborators to the repository to grant access
 
