@@ -73,9 +73,16 @@ body {
   line-height: 1.6;
   font-size: 1rem;
 
-  /* Clean gradient background without DNA animation */
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f1f5f9 100%);
-  background-attachment: fixed;
+  /* Subtle background image with transparent overlay and gradient */
+  background-color: #f8fafc;
+  background-image:
+    linear-gradient(rgba(248, 250, 252, 0.95), rgba(224, 231, 255, 0.92)),
+    url("/back.png"),
+    linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f1f5f9 100%);
+  background-size: cover, cover, auto;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center, center, top left;
+  background-attachment: fixed, fixed, fixed;
 }
 
 
