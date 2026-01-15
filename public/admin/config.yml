@@ -9,6 +9,9 @@ backend:
 # Users authenticate with their GitHub accounts
 # Just add collaborators to the repository to grant access
 
+# OAuth is handled by Vercel serverless functions
+# Environment variables: GITHUB_OAUTH_CLIENT_ID and GITHUB_OAUTH_CLIENT_SECRET
+
 # For local development, uncomment this:
 # local_backend: true
 
