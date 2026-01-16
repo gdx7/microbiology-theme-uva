@@ -282,7 +282,7 @@ export default function AboutPage() {
                       {strategy.groups.map((group) => (
                         <Link
                           key={group.slug}
-                          href={`/research-groups#${group.slug}`}
+                          href={`/research-groups/${group.slug}`}
                           style={{
                             display: "inline-flex",
                             alignItems: "center",
@@ -316,14 +316,6 @@ export default function AboutPage() {
                             }}
                           />
                           <span style={{ fontWeight: 500 }}>{group.name}</span>
-                          <span
-                            style={{
-                              color: "var(--text-muted)",
-                              fontSize: "0.8rem",
-                            }}
-                          >
-                            ({group.pi})
-                          </span>
                         </Link>
                       ))}
                     </div>
