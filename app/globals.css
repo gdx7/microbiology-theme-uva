@@ -194,18 +194,18 @@ header .container {
   padding-bottom: 1rem;
 }
 
-/* Title and subtitle - improved sizing */
+/* Site title - clean and professional */
 .site-title {
-  font-size: 1.25rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-main);
+  transition: color 0.2s ease;
 }
 
-.site-subtitle {
-  font-size: 0.875rem;
-  color: var(--text-soft);
-  margin-top: 0.125rem;
+.site-title:hover {
+  color: var(--primary);
 }
 
 /* Modern nav: clean, accessible */

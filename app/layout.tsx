@@ -23,27 +23,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Clean header with logo + navigation */}
         <header>
           <div className="container">
-            <div
+            <Link
+              href="/"
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "0.7rem",
+                gap: "0.75rem",
+                textDecoration: "none",
               }}
             >
               <Image
                 src="/logo.png"
                 alt="Microbiology theme logo"
-                width={72}
-                height={72}
+                width={56}
+                height={56}
                 priority
               />
-              <div>
-                <div className="site-title">Microbiology Theme</div>
-                <div className="site-subtitle">
-                  Swammerdam Institute of Life Sciences · University of Amsterdam
-                </div>
-              </div>
-            </div>
+              <span className="site-title">Microbiology Theme</span>
+            </Link>
 
             <nav className="nav">
               <Link href="/">Home</Link>
