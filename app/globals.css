@@ -76,17 +76,31 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   font-size: 1rem;
-
-  /* Subtle background image with transparent overlay and gradient */
   background-color: #f8fafc;
+  background-image: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f1f5f9 100%);
+}
+
+/* Translucent background image for non-home pages */
+.page-with-watermark {
+  position: relative;
+}
+
+.page-with-watermark::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image:
-    linear-gradient(rgba(248, 250, 252, 0.95), rgba(224, 231, 255, 0.92)),
-    url("/back.png"),
-    linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f1f5f9 100%);
-  background-size: cover, cover, auto;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center, center, top left;
-  background-attachment: fixed, fixed, fixed;
+    linear-gradient(rgba(248, 250, 252, 0.92), rgba(224, 231, 255, 0.88)),
+    url("/back.png");
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-attachment: fixed, fixed;
+  z-index: -1;
+  pointer-events: none;
 }
 
 

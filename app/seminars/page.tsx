@@ -42,7 +42,7 @@ export default function SeminarsPage() {
   const past = seminars.filter(s => new Date(s.date) < now).reverse();
 
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Seminars & Events</p>
         <h1 className="section-title">Upcoming Seminars</h1>

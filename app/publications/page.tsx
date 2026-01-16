@@ -42,7 +42,7 @@ export default function PublicationsPage() {
   const recent = publications.slice(0, 20);
 
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Research Output</p>
         <h1 className="section-title">Latest Publications</h1>

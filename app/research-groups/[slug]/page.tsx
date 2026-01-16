@@ -41,7 +41,7 @@ export default async function ResearchGroupPage({ params }: PageProps) {
   const hasRichContent = group.whatWeDo || group.howWeDoItExperimental || group.teamMembers;
 
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Research group</p>
         <h1 className="section-title">{group.name}</h1>

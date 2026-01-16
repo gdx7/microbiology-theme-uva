@@ -2,7 +2,7 @@
 
 export default function TeachingPage() {
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Teaching</p>
         <h1 className="section-title">Teaching & education</h1>

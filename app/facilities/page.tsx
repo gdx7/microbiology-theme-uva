@@ -25,7 +25,7 @@ export default function FacilitiesPage() {
   ];
 
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Facilities & platforms</p>
         <h1 className="section-title">Enabling technologies for microbiology</h1>

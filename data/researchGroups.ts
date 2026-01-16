@@ -26,6 +26,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "GL",
     pi: "Dr. Jianbo Zhang",
     role: "Principal Investigator",
+    contactEmail: "j.zhang6@uva.nl",
     shortDescription:
       "Microbiome and microbial community research using multi-omics, imaging and modelling in hosts, environments and industrial settings.",
     description:
@@ -39,6 +40,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "ESB",
     pi: "Dr. Meike Wortel",
     role: "Principal Investigator",
+    contactEmail: "m.t.wortel@uva.nl",
     shortDescription:
       "Evolutionary systems biology of microbial communities, linking experimental evolution, modelling and data-driven analysis.",
     description:
@@ -57,6 +59,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "Spore",
     pi: "Prof. Dr. Stanley Brul",
     role: "Chair MBMFS",
+    contactEmail: "s.brul@uva.nl",
     shortDescription:
       "Molecular biology and physiology of spores and stress-resistant microbes in relation to food safety and infection.",
     description:
@@ -78,6 +81,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "SSB",
     pi: "Prof. Dr. Marten Postma",
     role: "Principal Investigator",
+    contactEmail: "m.postma@uva.nl",
     shortDescription:
       "Spatial systems biology studying signal transduction and cell polarity regulation in microbial systems.",
     description:
@@ -102,6 +106,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "MMP",
     pi: "Dr. Filipe Branco dos Santos",
     role: "Principal Investigator",
+    contactEmail: "f.brancodossantos@uva.nl",
     shortDescription:
       "Quantitative microbial physiology and biotechnology, using systems and synthetic biology for strain development.",
     description:
@@ -143,6 +148,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "BCB",
     pi: "Prof. Dr. Leendert Hamoen",
     role: "Chair Bacterial Cell Biology and Physiology",
+    contactEmail: "l.w.hamoen@uva.nl",
     shortDescription:
       "Fundamental bacterial cell biology and chromosome dynamics underpinning growth, stress responses and pathogenesis.",
     description:
@@ -166,6 +172,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "ME",
     pi: "Prof. Dr. Sahar El Aidy",
     role: "Chair Microbiome Engineering",
+    contactEmail: "s.elaidy@uva.nl",
     shortDescription:
       "Human and industrial microbiome research and engineering, targeting health, food and biotechnology applications.",
     description:
@@ -202,6 +209,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "MSB",
     pi: "Dr. Gertjan Kramer",
     role: "Core facility lead",
+    contactEmail: "g.kramer@uva.nl",
     shortDescription:
       "Institute-wide mass spectrometry core, supporting microbial omics and quantitative biomolecular analysis.",
     description:
@@ -226,6 +234,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "NVWA",
     pi: "Prof. Linda Verhoef",
     role: "Endowed chair",
+    contactEmail: "l.p.b.verhoef@uva.nl",
     shortDescription:
       "Endowed chair connecting microbial food safety research with regulatory practice and national policy.",
     description:
@@ -245,6 +254,7 @@ export const researchGroups: ResearchGroup[] = [
     code: "PBL",
     pi: "Prof. Dr. Ghislain Schyns",
     role: "Professor by special appointment of Industrial Molecular Microbiology",
+    contactEmail: "g.r.l.j.schyns@uva.nl",
     shortDescription:
       "Peripheral microbiomes interactions with gut microbiomes and host, studying peribiomics axes and their networks.",
     description:

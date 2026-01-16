@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ContactPage() {
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Contact</p>
         <h1 className="section-title">Contact &amp; location</h1>

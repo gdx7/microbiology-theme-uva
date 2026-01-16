@@ -9,7 +9,7 @@ export default function ResearchGroupsPage() {
   const groups = getAllResearchGroups();
 
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Research groups</p>
         <h1 className="section-title">Research areas and groups</h1>

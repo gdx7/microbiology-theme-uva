@@ -47,7 +47,7 @@ export default function NewsPage() {
   const regular = newsItems.filter(item => !item.featured);
 
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">Latest Updates</p>
         <h1 className="section-title">News & Announcements</h1>

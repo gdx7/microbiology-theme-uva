@@ -17,7 +17,7 @@ export default function PeoplePage() {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <section className="section">
+    <section className="section page-with-watermark">
       <div className="container">
         <p className="section-kicker">People</p>
         <h1 className="section-title">Principal investigators</h1>
