@@ -4,9 +4,9 @@ name: Mass Spectrometry of Biomolecules
 code: MSB
 areaSlug: core-facilities
 pi: Dr. Gertjan Kramer
-role: Group leader & Head, MS core facility
+role: Head of the Core Facility
 contactEmail: g.kramer@uva.nl
-externalUrl: https://www.uva.nl/en/profile/k/r/g.kramer/g.kramer.html
+externalUrl: https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html
 shortDescription: Institute-wide mass spectrometry core, supporting microbial omics and quantitative biomolecular analysis.
 description: |
   The Mass Spectrometry of Biomolecules group functions as the institute's mass spectrometry core, supporting microbial omics, quantitative proteomics and metabolomics across the Microbiology Theme and other SILS programs.
