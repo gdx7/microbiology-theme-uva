@@ -210,7 +210,7 @@ export const researchGroups: ResearchGroup[] = [
     pi: "Dr. Gertjan Kramer",
     role: "Head of the Core Facility",
     contactEmail: "g.kramer@uva.nl",
-    externalUrl: "https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html",
+    externalUrl: "https://www.uva.nl/en/profile/k/r/g.kramer/g.kramer.html",
     shortDescription:
       "Institute-wide mass spectrometry core, supporting microbial omics and quantitative biomolecular analysis.",
     description:
