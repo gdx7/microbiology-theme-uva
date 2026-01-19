@@ -208,8 +208,9 @@ export const researchGroups: ResearchGroup[] = [
     name: "Mass Spectrometry of Biomolecules (MSB)",
     code: "MSB",
     pi: "Dr. Gertjan Kramer",
-    role: "Core facility lead",
+    role: "Head of the Core Facility",
     contactEmail: "g.kramer@uva.nl",
+    externalUrl: "https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html",
     shortDescription:
       "Institute-wide mass spectrometry core, supporting microbial omics and quantitative biomolecular analysis.",
     description:

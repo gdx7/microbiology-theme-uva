@@ -38,9 +38,9 @@ export const researchAreas: ResearchArea[] = [
   },
   {
     slug: "core-facilities",
-    code: "CF",
-    title: "Embedded Research Core Facilities",
+    code: "MSB",
+    title: "Mass Spectrometry Core Facility",
     description:
-      "State-of-the-art core facilities providing essential research infrastructure and expertise in mass spectrometry, proteomics, metabolomics, and other advanced analytical techniques to support microbiology research across all themes.",
+      "State-of-the-art research infrastructure and expertise in mass spectrometry for proteomics, metabolomics, lipidomics and other advanced analytical techniques to support microbiology research across all themes.",
   },
 ];
