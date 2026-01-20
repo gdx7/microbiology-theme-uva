@@ -8,7 +8,7 @@ role: Professor by special appointment of Industrial Molecular Microbiology
 contactEmail: g.r.l.j.schyns@uva.nl
 externalUrl: https://www.uva.nl/en/profile/s/c/g.r.l.j.schyns/g.r.l.j.schyns.html
 shortDescription: Peripheral microbiomes interactions with gut microbiomes and
-  host, studying peribiomics axes and their networks.
+  host, studying peribiome axes and their networks.
 description: The Peribiome Lab focuses on peripheral (skin, nasal, mouth)
   microbiomes interactions with gut microbiomes and host, studying the so-called
   axes and their network (peribiome). We set up bilateral physiomimetical
