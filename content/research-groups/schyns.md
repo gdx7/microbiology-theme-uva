@@ -34,6 +34,7 @@ researchFocus:
 keywords:
   - peripheral microbiomes
   - peribiomics
+  - peribiomes
   - host-microbe interactions
   - spatial biology
   - skin microbiome
