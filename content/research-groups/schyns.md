@@ -16,7 +16,7 @@ description: The Peribiome Lab focuses on peripheral (skin, nasal, mouth)
   dynamic interactions.
 whatWeDo: We focus on peripheral (skin, nasal, mouth) microbiomes interactions
   with gut microbiomes and host, to study the so-called axes and their network
-  (peribiomics). We investigate spatial biology of microbiome interactions and
+  (peribiome). We investigate spatial biology of microbiome interactions and
   molecular signaling during dynamic host-microbiome interactions.
 howWeDoItExperimental: We set up bilateral physiomimetical dynamic models to
   study molecular signals and spatial biology during the dynamic interactions.
