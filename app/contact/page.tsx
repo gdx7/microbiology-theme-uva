@@ -1,126 +1,105 @@
-// app/contact/page.tsx
 import Image from "next/image";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function ContactPage() {
   return (
-    <section className="section page-with-watermark">
-      <div className="container">
-        <p className="section-kicker">Contact</p>
-        <h1 className="section-title">Contact &amp; location</h1>
-        <p className="lead">
-          The Microbiology theme is hosted at the Swammerdam Institute of Life
-          Sciences (SILS), on the Science Park campus of the University of
-          Amsterdam.
-        </p>
+    <div className="relative overflow-hidden selection:bg-uva-red selection:text-white bg-academic-50 min-h-screen">
+      <section className="relative pt-32 pb-24 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-white via-academic-50 to-academic-100">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+          <ScrollReveal direction="up" delay={0.1}>
+            <div className="inline-flex gap-2 text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-uva-red mb-4 bg-uva-red/5 px-4 py-1.5 rounded-full border border-uva-red/10">
+              Contact
+            </div>
+            <h1 className="font-serif text-5xl md:text-6xl font-bold tracking-tight text-academic-900 leading-[1.1] mb-6">
+              Contact <span className="text-academic-400 font-light italic">& location</span>
+            </h1>
+            <p className="text-lg md:text-xl text-academic-600 leading-relaxed max-w-3xl font-light">
+              The Microbiology theme is hosted at the Swammerdam Institute of Life
+              Sciences (SILS), on the Science Park campus of the University of
+              Amsterdam.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
 
-        {/* Logo next to the contact boxes */}
-        <div
-          style={{
-            marginTop: "1.4rem",
-            display: "flex",
-            alignItems: "stretch",
-            gap: "1.4rem",
-            flexWrap: "wrap",
-          }}
-        >
-          <div
-            className="card"
-            style={{
-              flex: "0 0 auto",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "1rem 1.4rem",
-              maxWidth: "220px",
-            }}
-          >
-            <Image
-              src="/logo.png"
-              alt="Microbiology theme logo"
-              width={150}
-              height={140}
-              style={{ height: "auto", width: "150%", maxWidth: "210px" }}
-              priority
-            />
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 space-y-24">
+        {/* Contact Info Section */}
+        <section className="grid lg:grid-cols-[auto_1fr] gap-12 items-start">
+          <ScrollReveal direction="up" delay={0.2}>
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-academic-200 shadow-sm flex items-center justify-center w-[280px] h-[280px] mx-auto lg:mx-0 group hover:shadow-lg transition-all duration-500">
+              <Image
+                src="/logo.png"
+                alt="Microbiology theme logo"
+                width={180}
+                height={180}
+                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                priority
+              />
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <ScrollReveal direction="up" delay={0.3}>
+              <article className="bg-[#102a43] text-white rounded-3xl p-10 md:p-12 border border-academic-800 shadow-xl h-full relative overflow-hidden group">
+                {/* Decorative element */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-uva-red/20 blur-3xl rounded-full -mr-10 -mt-10"></div>
+                <h3 className="font-serif text-3xl font-bold mb-6 text-white group-hover:text-uva-red/90 transition-colors">General enquiries</h3>
+                <p className="text-academic-100 font-light leading-relaxed mb-8 text-lg">
+                  For questions about the Microbiology theme, research collaborations or student projects, please contact one of the principal investigators.
+                </p>
+                <div className="mt-auto pt-6 border-t border-academic-700/50">
+                  <p className="text-sm font-bold tracking-widest uppercase text-academic-400 mb-2">Email</p>
+                  <a href="mailto:microbiology-theme@sils.uva.nl" className="inline-flex items-center text-lg font-medium text-white hover:text-uva-red transition-colors">
+                    <svg className="w-5 h-5 mr-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    microbiology@sils.uva.nl
+                  </a>
+                </div>
+              </article>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.4}>
+              <article className="bg-white/60 backdrop-blur-md rounded-3xl p-10 md:p-12 border border-academic-200 shadow-sm hover:shadow-lg transition-all duration-500 h-full group hover:-translate-y-1">
+                <h3 className="font-serif text-3xl font-bold text-academic-900 mb-6 group-hover:text-academic-500 transition-colors">Postal & visiting address</h3>
+                <div className="text-academic-600 font-light leading-relaxed text-lg space-y-2">
+                  <p className="font-medium text-academic-800">Swammerdam Institute of Life Sciences (SILS)</p>
+                  <p>University of Amsterdam</p>
+                  <p>Science Park 904</p>
+                  <p>1098 XH Amsterdam</p>
+                  <p>The Netherlands</p>
+                </div>
+              </article>
+            </ScrollReveal>
           </div>
+        </section>
 
-          {/* Two contact boxes in the usual grid layout */}
-          <div className="contact-layout" style={{ flex: "1 1 280px" }}>
-            <div className="contact-box">
-              <h3>General enquiries</h3>
-              <p>
-                For questions about the Microbiology theme, research
-                collaborations or student projects, please contact one of the principal investigators.
-              </p>
-              <p style={{ marginTop: "0.6rem" }}>
-                <strong>Email:</strong>{" "}
-                <a href="mailto:microbiology-theme@sils.uva.nl">
-                  microbiology@sils.uva.nl
-                </a>
+        {/* Map Section */}
+        <section>
+          <ScrollReveal direction="up" delay={0.2}>
+            <div className="mb-10 text-center max-w-3xl mx-auto">
+              <h2 className="font-serif text-4xl font-bold text-academic-900 mb-6">
+                Map & directions
+              </h2>
+              <p className="text-xl text-academic-600 font-light leading-relaxed">
+                SILS is located in the Faculty of Science building at Amsterdam Science Park 904. The campus is easily reachable by train, bus and bicycle.
               </p>
             </div>
+          </ScrollReveal>
 
-            <div className="contact-box">
-              <h3>Postal &amp; visiting address</h3>
-              <p>
-                Swammerdam Institute of Life Sciences (SILS)
-                <br />
-                University of Amsterdam
-                <br />
-                Science Park 904
-                <br />
-                1098 XH Amsterdam
-                <br />
-                The Netherlands
-              </p>
+          <ScrollReveal direction="up" delay={0.3}>
+            <div className="relative w-full overflow-hidden rounded-3xl border border-academic-200 shadow-lg bg-academic-100/50 backdrop-blur-md aspect-video md:aspect-[21/9] group">
+              <div className="absolute inset-0 bg-academic-900/5 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none"></div>
+              <iframe
+                title="SILS, Science Park 904, Amsterdam"
+                src="https://www.google.com/maps?q=Science%20Park%20904,%201098%20XH%20Amsterdam&output=embed"
+                className="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
-          </div>
-        </div>
-
-        {/* Map – glassy card with Science Park 904 */}
-        <div style={{ marginTop: "2.2rem" }}>
-          <h2 className="section-title" style={{ fontSize: "1.1rem" }}>
-            Map &amp; directions
-          </h2>
-          <p className="lead">
-            SILS is located in the Faculty of Science building at Amsterdam
-            Science Park 904. The campus is easily reachable by train, bus and
-            bicycle.
-          </p>
-
-          <div
-            style={{
-              marginTop: "1rem",
-              position: "relative",
-              paddingBottom: "56.25%", // 16:9
-              height: 0,
-              overflow: "hidden",
-              borderRadius: "16px",
-              border: "1px solid rgba(148, 163, 184, 0.5)",
-              boxShadow: "0 18px 40px rgba(15, 23, 42, 0.15)",
-              background: "rgba(194, 193, 193, 0.18)",
-              backdropFilter: "blur(16px)",
-              WebkitBackdropFilter: "blur(16px)",
-            }}
-          >
-            <iframe
-              title="SILS, Science Park 904, Amsterdam"
-              src="https://www.google.com/maps?q=Science%20Park%20904,%201098%20XH%20Amsterdam&output=embed"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                border: 0,
-              }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          </div>
-        </div>
+          </ScrollReveal>
+        </section>
       </div>
-    </section>
+    </div>
   );
 }

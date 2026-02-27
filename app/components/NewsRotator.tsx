@@ -22,7 +22,7 @@ const slides: Slide[] = [
     description:
       "The theme is closely linked to AMEC, which integrates microbiome research across Amsterdam’s academic and clinical partners.",
     tag: "AMEC",
-    link: "https://www.amsterdamumc.org" /* placeholder – adjust if needed */,
+    link: "https://www.amsterdamumc.org",
   },
   {
     title: "AMSA & AMEC seminar series",
@@ -66,108 +66,47 @@ export default function NewsRotator() {
   };
 
   return (
-    <div className="news-rotator">
+    <div className="flex flex-col h-full rounded-2xl overflow-hidden bg-white/40 border border-academic-100/50 shadow-sm relative group">
       <div
-        style={{
-          padding: "2rem 2.5rem",
-          opacity: isTransitioning ? 0 : 1,
-          transform: isTransitioning ? 'translateY(10px)' : 'translateY(0)',
-          transition: 'opacity 0.3s ease, transform 0.3s ease',
-        }}
+        className={`flex-grow p-8 md:p-12 transition-all duration-300 ease-in-out ${isTransitioning ? "opacity-0 translate-y-2 relative" : "opacity-100 translate-y-0"
+          }`}
       >
         {current.tag && (
-          <div
-            style={{
-              fontSize: "0.875rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              marginBottom: "0.75rem",
-              color: "var(--primary)",
-              fontWeight: 600,
-            }}
-          >
+          <div className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.15em] uppercase text-uva-red bg-uva-red/5 rounded-full border border-uva-red/10">
             {current.tag}
           </div>
         )}
-        <h3
-          style={{
-            margin: "0 0 1rem",
-            fontSize: "1.5rem",
-            fontWeight: 700,
-            color: "var(--text-main)",
-          }}
-        >
+        <h3 className="font-serif text-3xl font-bold text-academic-900 mb-6 group-hover:text-academic-700 transition-colors">
           {current.title}
         </h3>
-        <p
-          style={{
-            margin: 0,
-            fontSize: "1rem",
-            color: "var(--text-soft)",
-            lineHeight: 1.6,
-          }}
-        >
+        <p className="text-academic-600 text-lg leading-relaxed font-light mb-8 max-w-2xl">
           {current.description}
         </p>
+
         {current.link && (
-          <p
-            style={{
-              margin: "1.5rem 0 0",
-              fontSize: "0.9375rem",
-            }}
+          <a
+            href={current.link}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-academic-900 hover:text-uva-red transition-all duration-300 mt-2"
           >
-            <a
-              href={current.link}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                color: "var(--primary)",
-                fontWeight: 600,
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-              }}
-            >
-              Learn more →
-            </a>
-          </p>
+            Learn more
+            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+          </a>
         )}
       </div>
 
       {/* Navigation dots at the bottom */}
-      <div
-        style={{
-          display: "flex",
-          gap: "0.75rem",
-          justifyContent: "center",
-          padding: "1.25rem",
-          borderTop: "1px solid var(--border-subtle)",
-        }}
-      >
+      <div className="flex justify-center gap-3 p-6 border-t border-academic-200/50 bg-white/30 backdrop-blur-sm">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => handleDotClick(i)}
             aria-label={`Go to slide ${i + 1}`}
-            style={{
-              width: i === index ? 32 : 10,
-              height: 10,
-              borderRadius: "999px",
-              background: i === index ? "var(--primary)" : "var(--border-medium)",
-              border: "none",
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              if (i !== index) {
-                e.currentTarget.style.background = "var(--border-strong)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (i !== index) {
-                e.currentTarget.style.background = "var(--border-medium)";
-              }
-            }}
+            className={`h-2.5 rounded-full transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-uva-red focus:ring-offset-2 ${i === index
+                ? "w-8 bg-uva-red"
+                : "w-2.5 bg-academic-300 hover:bg-academic-400"
+              }`}
           />
         ))}
       </div>

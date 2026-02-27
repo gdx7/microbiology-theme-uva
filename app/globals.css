@@ -1,5 +1,8 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.ts";
 
 /* =========
    Basic reset
@@ -22,36 +25,50 @@ html {
 }
 
 /* =========
-   Theme - Enhanced Professional Color Palette
+   Theme - Premium Academic Color Palette
    ========= */
 
 :root {
   /* Backgrounds */
-  --bg: #f8fafc;
+  --bg: #f0f4f8;
+  /* academic-50 */
   --bg-elevated: #ffffff;
-  --bg-section: #fafbfc;
+  --bg-section: #f8fafc;
 
   /* Text */
-  --text-main: #1e293b;
-  --text-soft: #475569;
-  --text-muted: #64748b;
+  --text-main: #102a43;
+  /* academic-900 */
+  --text-soft: #334e68;
+  /* academic-700 */
+  --text-muted: #627d98;
+  /* academic-500 */
 
   /* Borders */
-  --border-subtle: #e2e8f0;
-  --border-medium: #cbd5e1;
-  --border-strong: #94a3b8;
+  --border-subtle: #d9e2ec;
+  /* academic-100 */
+  --border-medium: #bcccdc;
+  /* academic-200 */
+  --border-strong: #829ab1;
+  /* academic-400 */
 
-  /* Accents - Using blue academic colors with UvA red accent */
-  --primary: #2563eb;
-  --primary-dark: #1e40af;
-  --primary-light: #60a5fa;
+  /* Accents - Academic Navy with UvA Red */
+  --primary: #102a43;
+  /* Deep academic navy */
+  --primary-dark: #243b53;
+  /* Slightly lighter on hover */
+  --primary-light: #486581;
+  /* Muted blue */
+
   --accent: #D00D17;
+  /* UvA Red */
   --accent-hover: #A00A12;
-  --accent-soft: rgba(37, 99, 235, 0.1);
-  --accent-purple: #8b5cf6;
-  --accent-teal: #14b8a6;
-  --accent-orange: #f97316;
-  --accent-pink: #ec4899;
+  --accent-soft: rgba(208, 13, 23, 0.05);
+
+  --accent-purple: #334e68;
+  /* Replaced generic purple with academic slate */
+  --accent-teal: #243b53;
+  --accent-orange: #D00D17;
+  --accent-pink: #A00A12;
 
   /* Semantic colors */
   --success: #10b981;
@@ -59,16 +76,16 @@ html {
   --warning: #f59e0b;
 
   /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Shadows - softer glassmorphism */
+  --shadow-sm: 0 2px 8px -2px rgba(16, 42, 67, 0.05);
+  --shadow-md: 0 4px 16px -4px rgba(16, 42, 67, 0.08);
+  --shadow-lg: 0 10px 30px -4px rgba(16, 42, 67, 0.1);
+  --shadow-xl: 0 20px 40px -8px rgba(16, 42, 67, 0.15);
 }
 
 body {
@@ -76,8 +93,10 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   font-size: 1rem;
-  background-color: #f8fafc;
-  background-image: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f1f5f9 100%);
+  background-color: var(--bg);
+  /* A refined, very subtle mesh gradient effect */
+  background-image: linear-gradient(135deg, #f0f4f8 0%, #ffffff 50%, #d9e2ec 100%);
+  background-attachment: fixed;
 }
 
 /* Translucent background image for non-home pages */
@@ -93,7 +112,7 @@ body {
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(rgba(248, 250, 252, 0.92), rgba(224, 231, 255, 0.88)),
+    linear-gradient(rgba(240, 244, 248, 0.95), rgba(255, 255, 255, 0.9)),
     url("/back.png");
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
@@ -109,22 +128,7 @@ body {
    Links
    ========= */
 
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
+/* Removed conflicting global link styles to allow Tailwind full control */
 
 /* Skip to content link for accessibility */
 .skip-to-content {
@@ -936,6 +940,7 @@ footer .container {
     opacity: 0;
     transform: translate3d(0, 12px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -946,6 +951,7 @@ footer .container {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
