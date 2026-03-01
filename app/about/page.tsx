@@ -90,7 +90,7 @@ const icons = { RS1: RS1Icon, RS2: RS2Icon, RS3: RS3Icon };
 export default function AboutPage() {
   return (
     <div className="relative overflow-hidden selection:bg-uva-red selection:text-white bg-academic-50 min-h-screen">
-      <section className="relative pt-12 pb-12 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-white via-academic-50 to-academic-100">
+      <section className="relative pt-32 pb-24 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-white via-academic-50 to-academic-100">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <ScrollReveal direction="up" delay={0.1}>
             <div className="inline-flex gap-2 text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-uva-red mb-4 bg-uva-red/5 px-4 py-1.5 rounded-full border border-uva-red/10">

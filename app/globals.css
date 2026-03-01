@@ -519,12 +519,6 @@ h2.section-title {
    Grids & cards
    ========= */
 
-.grid {
-  display: grid;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
 .research-groups-grid {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
