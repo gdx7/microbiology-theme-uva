@@ -42,9 +42,11 @@ export default async function ResearchGroupPage({ params }: PageProps) {
   const hasRichContent = group.whatWeDo || group.howWeDoItExperimental || group.teamMembers;
 
   return (
-    <div className="relative overflow-hidden selection:bg-uva-red selection:text-white bg-academic-50 min-h-screen pb-24">
-      {/* Premium Hero Section */}
-      <section className="relative pt-32 pb-16 lg:pb-24 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-white via-academic-50 to-academic-100">
+    <div className="min-h-screen bg-academic-50 selection:bg-uva-red selection:text-white">
+
+      {/* Hero Section */}
+      <section className="relative pt-12 pb-16 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-white via-academic-50 to-academic-100">
+        {/* Subtle background patterns */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#102a43_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
           <ScrollReveal direction="up" delay={0.1}>
@@ -91,7 +93,7 @@ export default async function ResearchGroupPage({ params }: PageProps) {
             )}
           </ScrollReveal>
         </div>
-      </section>
+      </section >
 
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-16 space-y-24">
         {/* What we do */}
@@ -252,6 +254,6 @@ export default async function ResearchGroupPage({ params }: PageProps) {
           </ScrollReveal>
         )}
       </div>
-    </div>
+    </div >
   );
 }

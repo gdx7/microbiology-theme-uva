@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden selection:bg-uva-red selection:text-white">
       {/* HERO SECTION */}
-      <section id="hero" className="relative min-h-[90vh] flex items-center pt-24 pb-32 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-academic-50 via-white to-academic-100">
+      <section id="hero" className="relative min-h-[90vh] flex items-center pt-12 pb-32 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-academic-50 via-white to-academic-100">
         <HeroParticles />
 
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 w-full">

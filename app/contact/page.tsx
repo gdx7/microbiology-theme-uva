@@ -4,7 +4,7 @@ import ScrollReveal from "../components/ScrollReveal";
 export default function ContactPage() {
   return (
     <div className="relative overflow-hidden selection:bg-uva-red selection:text-white bg-academic-50 min-h-screen">
-      <section className="relative pt-32 pb-24 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-white via-academic-50 to-academic-100">
+      <section className="relative pt-12 pb-12 border-b border-academic-200 overflow-hidden bg-gradient-to-br from-white via-academic-50 to-academic-100">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <ScrollReveal direction="up" delay={0.1}>
             <div className="inline-flex gap-2 text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-uva-red mb-4 bg-uva-red/5 px-4 py-1.5 rounded-full border border-uva-red/10">
@@ -24,9 +24,9 @@ export default function ContactPage() {
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 space-y-24">
         {/* Contact Info Section */}
-        <section className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch lg:items-start">
-          <ScrollReveal direction="up" delay={0.2} className="w-full lg:w-[280px] flex-shrink-0">
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-academic-200 shadow-sm flex items-center justify-center w-full lg:w-[280px] h-[280px] mx-auto lg:mx-0 group hover:shadow-lg transition-all duration-500">
+        <section className="grid lg:grid-cols-[280px_1fr] gap-8 lg:gap-12 items-start">
+          <ScrollReveal direction="up" delay={0.2} className="w-full">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-academic-200 shadow-sm flex items-center justify-center w-full h-[280px] group hover:shadow-lg transition-all duration-500">
               <Image
                 src="/logo.png"
                 alt="Microbiology theme logo"
@@ -38,7 +38,7 @@ export default function ContactPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8 flex-1 w-full">
+          <div className="grid md:grid-cols-2 gap-8 w-full">
             <ScrollReveal direction="up" delay={0.3} className="h-full">
               <article className="bg-[#102a43] text-white rounded-3xl p-10 md:p-12 border border-academic-800 shadow-xl h-full relative overflow-hidden group">
                 {/* Decorative element */}

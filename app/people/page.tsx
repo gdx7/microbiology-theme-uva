@@ -18,8 +18,8 @@ export default function PeoplePage() {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <section className="section page-with-watermark">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24">
+    <section className="page-with-watermark">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-24">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {pis.map((pi, idx) => (
             <ScrollReveal key={`${pi.name}-${idx}`} direction="up" delay={0.1 * (idx % 4 + 1)}>
