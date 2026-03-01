@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 />
               </div>
               <span className="font-serif text-2xl font-bold tracking-tight text-academic-900 group-hover:text-uva-red transition-colors duration-300">
-                Microbiology
+                Microbiology @ SILS
               </span>
             </Link>
 
@@ -73,7 +73,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </header>
 
-        <main id="main-content" className="min-h-screen pt-24">
+        <main id="main-content" className="min-h-screen pt-20">
           {children}
         </main>
 

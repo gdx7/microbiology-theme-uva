@@ -24,9 +24,9 @@ export default function ContactPage() {
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 space-y-24">
         {/* Contact Info Section */}
-        <section className="grid lg:grid-cols-[auto_1fr] gap-12 items-start">
-          <ScrollReveal direction="up" delay={0.2}>
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-academic-200 shadow-sm flex items-center justify-center w-[280px] h-[280px] mx-auto lg:mx-0 group hover:shadow-lg transition-all duration-500">
+        <section className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch lg:items-start">
+          <ScrollReveal direction="up" delay={0.2} className="w-full lg:w-[280px] flex-shrink-0">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-academic-200 shadow-sm flex items-center justify-center w-full lg:w-[280px] h-[280px] mx-auto lg:mx-0 group hover:shadow-lg transition-all duration-500">
               <Image
                 src="/logo.png"
                 alt="Microbiology theme logo"
@@ -38,8 +38,8 @@ export default function ContactPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <ScrollReveal direction="up" delay={0.3}>
+          <div className="grid md:grid-cols-2 gap-8 flex-1 w-full">
+            <ScrollReveal direction="up" delay={0.3} className="h-full">
               <article className="bg-[#102a43] text-white rounded-3xl p-10 md:p-12 border border-academic-800 shadow-xl h-full relative overflow-hidden group">
                 {/* Decorative element */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-uva-red/20 blur-3xl rounded-full -mr-10 -mt-10"></div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
               </article>
             </ScrollReveal>
 
-            <ScrollReveal direction="up" delay={0.4}>
+            <ScrollReveal direction="up" delay={0.4} className="h-full">
               <article className="bg-white/60 backdrop-blur-md rounded-3xl p-10 md:p-12 border border-academic-200 shadow-sm hover:shadow-lg transition-all duration-500 h-full group hover:-translate-y-1">
                 <h3 className="font-serif text-3xl font-bold text-academic-900 mb-6 group-hover:text-academic-500 transition-colors">Postal & visiting address</h3>
                 <div className="text-academic-600 font-light leading-relaxed text-lg space-y-2">
