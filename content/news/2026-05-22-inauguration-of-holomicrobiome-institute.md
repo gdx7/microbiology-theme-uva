@@ -3,8 +3,8 @@ title: Inauguration of the Holomicrobiome Institute
 date: 2026-05-22T17:12:00.000+02:00
 tag: Event
 description: On Wednesday 27th May, the Holomicrobiome Institute will officially launch, bringing together innovators across disciplines to study microbiomes as interconnected systems. Limited spots are still open for the morning launch program!
-image: /images/uploads/holomicrobiome_launch.png
-link: https://www.linkedin.com/posts/lindavandeburgwal_on-wednesday-27nd-may-we-will-launch-the-share-7463489911208435713-hAQZ
+image: /images/uploads/holomicrobiome_launch.jpg
+link: https://holomicrobio.me/
 featured: true
 ---
 On Wednesday, 27th of May, we will officially launch the **Holomicrobiome Institute**, a groundbreaking public-private research hub set to transform how we study and apply microbiome science.
@@ -18,4 +18,4 @@ From soil and plants to animals, food systems, and human health, the microbiome 
 
 Don't miss the opportunity to learn about our collaborative roadmap, state-of-the-art computational modeling, and how you can contribute to this revolutionary initiative.
 
-👉 [View the official announcement & register on LinkedIn](https://www.linkedin.com/posts/lindavandeburgwal_on-wednesday-27nd-may-we-will-launch-the-share-7463489911208435713-hAQZ) or visit [holomicrobioom.nl](https://www.holomicrobioom.nl) for more details.
+👉 [Register on the Holomicrobiome website](https://holomicrobio.me/) or read the [official announcement on LinkedIn](https://www.linkedin.com/posts/lindavandeburgwal_on-wednesday-27nd-may-we-will-launch-the-share-7463489911208435713-hAQZ).
