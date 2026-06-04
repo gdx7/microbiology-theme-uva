@@ -35,7 +35,7 @@ This guide explains how to connect the `microbioSILS@gmail.com` email address to
     *   Search for "HTTP".
     *   Select **Make a request**.
     *   Configure it exactly like this:
-        *   **URL:** `https://microbiology-theme-uva.vercel.app/api/webhooks/email` *(Replace with your live domain if different)*
+        *   **URL:** `https://microbiology-sils.nl/api/webhooks/email` *(Replace with your live domain if different)*
         *   **Method:** `POST`
         *   **Headers:**
             *   *Item 1 Key:* `Authorization`

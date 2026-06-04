@@ -6,7 +6,7 @@
 
 ## Quick Start
 
-1. Go to **https://microbiology-theme-uva.vercel.app/admin**
+1. Go to **https://microbiology-sils.nl/admin**
 2. Click **"Login with GitHub"**
 3. Select your research group and start editing
 4. Click **"Publish"** when done
@@ -28,7 +28,7 @@
 
 ## 2. Logging In
 
-1. Go to: **https://microbiology-theme-uva.vercel.app/admin**
+1. Go to: **https://microbiology-sils.nl/admin**
 2. Click **"Login with GitHub"**
 3. Authorize the app when prompted
 

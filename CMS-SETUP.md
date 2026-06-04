@@ -31,7 +31,7 @@ To enable GitHub authentication, you need to create a GitHub OAuth App:
 3. Click **"New OAuth App"**
 4. Fill in the details:
    - **Application name**: `Microbiology Theme CMS`
-   - **Homepage URL**: `https://microbiology-theme-uva.vercel.app`
+   - **Homepage URL**: `https://microbiology-sils.nl`
    - **Authorization callback URL**: `https://api.netlify.com/auth/done`
 
    ⚠️ **IMPORTANT:** The callback URL MUST be exactly `https://api.netlify.com/auth/done` even though you're hosting on Vercel. This is because Decap CMS uses Netlify's OAuth service as an authentication gateway.

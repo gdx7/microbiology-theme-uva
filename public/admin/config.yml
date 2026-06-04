@@ -2,7 +2,7 @@ backend:
   name: github
   repo: gdx7/microbiology-theme-uva
   branch: main
-  base_url: https://microbiology-theme-uva.vercel.app
+  base_url: https://microbiology-sils.nl
   auth_endpoint: /api/auth/github/authorize
 
 # Using GitHub backend with custom OAuth handler
