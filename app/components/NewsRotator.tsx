@@ -22,7 +22,7 @@ const slides: Slide[] = [
     description:
       "The theme is closely linked to AMEC, which integrates microbiome research across Amsterdam’s academic and clinical partners.",
     tag: "AMEC",
-    link: "https://www.amsterdamumc.org",
+    link: "https://a-mec.nl/",
   },
   {
     title: "AMSA & AMEC seminar series",
