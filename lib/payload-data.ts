@@ -37,6 +37,33 @@ export interface PublicationData {
   group?: string
 }
 
+export interface VacancyData {
+  title: string
+  description: string
+  positionType?: string
+  group?: string
+  location?: string
+  deadline?: string
+  applyLink?: string
+  contactEmail?: string
+}
+
+export interface TechniqueData {
+  name: string
+  description: string
+  category?: string
+  group?: string
+  link?: string
+}
+
+export const POSITION_TYPE_LABELS: Record<string, string> = {
+  phd: 'PhD',
+  postdoc: 'Postdoc',
+  technician: 'Technician / Analyst',
+  student: 'Master / Bachelor project',
+  other: 'Other',
+}
+
 function mediaUrl(value: unknown): string | undefined {
   if (!value) return undefined
   if (typeof value === 'string') return value
@@ -148,6 +175,45 @@ export async function getAllSeminars(): Promise<SeminarData[]> {
     location: s.location ?? undefined,
     description: s.description ?? undefined,
     link: s.link ?? undefined,
+  }))
+}
+
+export async function getAllVacancies(): Promise<VacancyData[]> {
+  const payload = await client()
+  const res = await payload.find({
+    collection: 'vacancies',
+    depth: 0,
+    limit: 200,
+    sort: '-createdAt',
+  })
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  return res.docs.map((v: any) => ({
+    title: v.title,
+    description: v.description,
+    positionType: v.positionType ?? undefined,
+    group: v.group ?? undefined,
+    location: v.location ?? undefined,
+    deadline: v.deadline ?? undefined,
+    applyLink: v.applyLink ?? undefined,
+    contactEmail: v.contactEmail ?? undefined,
+  }))
+}
+
+export async function getAllTechniques(): Promise<TechniqueData[]> {
+  const payload = await client()
+  const res = await payload.find({
+    collection: 'techniques',
+    depth: 0,
+    limit: 200,
+    sort: 'name',
+  })
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  return res.docs.map((t: any) => ({
+    name: t.name,
+    description: t.description,
+    category: t.category ?? undefined,
+    group: t.group ?? undefined,
+    link: t.link ?? undefined,
   }))
 }
 

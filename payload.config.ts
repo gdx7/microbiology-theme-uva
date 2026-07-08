@@ -11,6 +11,8 @@ import { Media } from './collections/Media'
 import { ResearchGroups } from './collections/ResearchGroups'
 import { News } from './collections/News'
 import { Seminars } from './collections/Seminars'
+import { Vacancies } from './collections/Vacancies'
+import { Techniques } from './collections/Techniques'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -40,7 +42,7 @@ export default buildConfig({
       titleSuffix: '— Microbiology CMS',
     },
   },
-  collections: [Users, Media, ResearchGroups, News, Seminars],
+  collections: [Users, Media, ResearchGroups, News, Seminars, Vacancies, Techniques],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   db,

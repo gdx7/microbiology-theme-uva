@@ -59,6 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 { name: 'Research groups', href: '/research-groups' },
                 { name: 'News', href: '/news' },
                 { name: 'People', href: '/people' },
+                { name: 'Vacancies', href: '/vacancies' },
                 { name: 'Contact', href: '/contact' },
               ].map((link) => (
                 <Link
@@ -87,7 +88,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <a href="https://sils.uva.nl" target="_blank" rel="noopener noreferrer" className="hover:text-academic-900 transition-colors">SILS Website</a>
               </div>
               <div className="text-center md:text-right">
-                Designed by Gaurav, Claude AI and Gemini<br />
+                Designed using Claude and Gemini<br />
                 &copy; {new Date().getFullYear()} University of Amsterdam
               </div>
             </div>

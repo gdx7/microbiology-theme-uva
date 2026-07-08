@@ -13,6 +13,7 @@ export default function Home() {
     { label: "News", value: "", href: "/news" },
     { label: "Upcoming seminars", value: "", href: "/seminars" },
     { label: "Latest publications", value: "", href: "/publications" },
+    { label: "Vacancies", value: "", href: "/vacancies" },
   ];
 
   return (
@@ -61,7 +62,7 @@ export default function Home() {
 
               {/* Stats / Quick Links */}
               <ScrollReveal direction="up" delay={0.5}>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
                   {stats.map((s) => (
                     <Link key={s.label} href={s.href} className="group relative overflow-hidden bg-white/80 backdrop-blur-md border border-academic-200 p-5 rounded-xl hover:border-academic-400 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
                       <div className="absolute top-0 left-0 w-1 h-full bg-academic-300 group-hover:bg-uva-red transition-colors duration-300"></div>
@@ -190,6 +191,29 @@ export default function Home() {
                 </ScrollReveal>
               );
             })}
+
+            {/* Techniques highlight box — CMS-managed methods (e.g. Ribo-seq) */}
+            <ScrollReveal direction="up" delay={0.1 * (areas.length + 2)}>
+              <Link
+                href="/techniques"
+                className="block group h-full bg-gradient-to-br from-uva-red/20 to-transparent border border-uva-red/30 rounded-2xl p-8 hover:border-uva-red transition-all duration-300"
+              >
+                <div className="w-12 h-12 flex items-center justify-center text-uva-red mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 3h6M10 3v6.5a2 2 0 0 1-.4 1.2L4.5 18a2 2 0 0 0 1.6 3.2h11.8a2 2 0 0 0 1.6-3.2l-5.1-7.3a2 2 0 0 1-.4-1.2V3" /><path d="M7 14h10" /></svg>
+                </div>
+                <div className="flex items-center gap-2 mb-3">
+                  <h3 className="text-xl font-bold text-white tracking-tight">Techniques</h3>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-uva-red bg-uva-red/10 px-2 py-0.5 rounded">New</span>
+                </div>
+                <p className="text-academic-300 leading-relaxed font-light mb-8">
+                  State-of-the-art methods from across our theme — like Ribo-seq — and the technologies that power our research.
+                </p>
+                <div className="inline-flex items-center text-sm font-semibold tracking-wide text-white">
+                  Explore techniques
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </div>
+              </Link>
+            </ScrollReveal>
           </div>
         </div>
       </section>
