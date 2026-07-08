@@ -44,3 +44,6 @@ next-env.d.ts
 payload-dev.db
 payload-dev.db-*
 /public/media
+
+# Office lock/temp files
+~$*
