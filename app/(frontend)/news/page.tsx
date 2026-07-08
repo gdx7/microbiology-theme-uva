@@ -1,48 +1,11 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import Link from 'next/link';
 import ScrollReveal from "../components/ScrollReveal";
+import { getAllNews } from "@/lib/payload-data";
 
-interface NewsItem {
-  title: string;
-  date: string;
-  tag: string;
-  description: string;
-  body?: string;
-  link?: string;
-  image?: string;
-  featured?: boolean;
-  slug?: string;
-}
+// Rendered on demand so edits made in /admin appear immediately.
+export const dynamic = "force-dynamic";
 
-function getNewsItems(): NewsItem[] {
-  const newsDirectory = path.join(process.cwd(), 'content/news');
-
-  if (!fs.existsSync(newsDirectory)) {
-    return [];
-  }
-
-  const fileNames = fs.readdirSync(newsDirectory);
-  const newsItems = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
-      const fullPath = path.join(newsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data } = matter(fileContents);
-
-      // Extract slug from filename
-      const slug = fileName.replace(/\.md$/, '');
-
-      return { ...data, slug } as NewsItem;
-    })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-  return newsItems;
-}
-
-export default function NewsPage() {
-  const newsItems = getNewsItems();
+export default async function NewsPage() {
+  const newsItems = await getAllNews();
   const featured = newsItems.filter(item => item.featured);
   const regular = newsItems.filter(item => !item.featured);
 

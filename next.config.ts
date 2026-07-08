@@ -1,5 +1,6 @@
 // next.config.ts
 import type { NextConfig } from "next";
+import { withPayload } from "@payloadcms/next/withPayload";
 
 const nextConfig: NextConfig = {
   images: {
@@ -8,9 +9,13 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
-      // You might need to add other image sources if your data.ts files link to external images
+      // Vercel Blob storage (production media uploads)
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+      },
     ],
   },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig);

@@ -1,38 +1,21 @@
 // app/research-groups/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getResearchGroupBySlug, getAllResearchGroups } from "@/lib/markdown";
-import { researchGroups } from "@/data/researchGroups";
+import { getResearchGroupBySlug } from "@/lib/payload-data";
 import ScrollReveal from "../../components/ScrollReveal";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  // Get all markdown files
-  const markdownGroups = getAllResearchGroups();
-
-  return markdownGroups.map((group) => ({
-    slug: group.slug,
-  }));
-}
+// Rendered on demand so edits made in /admin appear immediately.
+export const dynamic = "force-dynamic";
 
 export default async function ResearchGroupPage({ params }: PageProps) {
   const { slug } = await params;
 
-  // Try to get group from markdown first
-  let group = getResearchGroupBySlug(slug);
-
-  // Fallback to data array if no markdown file
-  if (!group) {
-    const dataGroup = researchGroups.find((g) => g.slug === slug);
-    if (!dataGroup) {
-      return notFound();
-    }
-    // Convert data group to expected format
-    group = dataGroup as any;
-  }
+  // Load the group from the CMS (Payload)
+  const group = await getResearchGroupBySlug(slug);
 
   if (!group) {
     return notFound();

@@ -1,4 +1,5 @@
-// app/layout.tsx
+// app/(frontend)/layout.tsx — root layout for the public site (the Payload
+// admin has its own root layout under app/(payload)).
 import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";

@@ -2,13 +2,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import { researchAreas } from "@/data/researchAreas";
-import { getAllResearchGroups } from "@/lib/markdown";
+import { getAllResearchGroups } from "@/lib/payload-data";
 import ScrollReveal from "../components/ScrollReveal";
 
-export default function ResearchGroupsPage() {
+// Rendered on demand so edits made in /admin appear immediately.
+export const dynamic = "force-dynamic";
+
+export default async function ResearchGroupsPage() {
   const areas = researchAreas as any[];
-  // Get all groups from markdown files
-  const groups = getAllResearchGroups();
+  // Get all groups from the CMS (Payload)
+  const groups = await getAllResearchGroups();
 
   return (
     <div className="relative overflow-hidden selection:bg-uva-red selection:text-white bg-academic-50 min-h-screen">

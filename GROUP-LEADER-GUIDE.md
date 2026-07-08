@@ -1,158 +1,139 @@
-# Group Leader's Guide to Editing Your Research Group Page
+# Editing Your Research Group Page — A Guide for Group Leaders
 
-**A Simple Guide to Managing Your Content (No Coding Required)**
+**No coding required.** You log in with an email and password, edit a simple form,
+and click **Save**. Your changes appear on the website within a few seconds.
 
 ---
 
-## Quick Start
+## Quick start
 
 1. Go to **https://microbiology-sils.nl/admin**
-2. Click **"Login with GitHub"**
-3. Select your research group and start editing
-4. Click **"Publish"** when done
+2. Log in with your **email and password** (sent to you by Gaurav).
+3. Click **Research Groups** → choose **your group**.
+4. Edit the text, add team photos, then click **Save**.
+5. Refresh the public page — your changes are already live.
+
+> **Two things to know before you start**
+> - There is **no separate "publish" step and no draft** — clicking **Save** makes the
+>   change live immediately. Read it over before you save.
+> - Everyone can technically open any group, but **please only edit your own group's page.**
 
 ---
 
-## 1. Getting Access
+## 1. Getting access
 
-### First-Time Setup
+You do **not** need a GitHub account (that was the old system). Gaurav creates an
+account for you and sends you a login email + a temporary password.
 
-1. Create a free GitHub account at https://github.com/signup (use your @uva.nl email)
-2. Send your GitHub username to Gaurav Dugar (G.Dugar@uva.nl)
-3. Accept the invitation email you receive
-
-![Screenshot: GitHub signup page]
-<!-- TODO: Add screenshot of GitHub signup -->
+- **First login:** go to https://microbiology-sils.nl/admin, enter your email and the
+  temporary password, then change your password (top-right menu → **Account**).
+- **Forgot your password?** For now, email **Gaurav Dugar (G.Dugar@uva.nl)** to reset it.
 
 ---
 
-## 2. Logging In
+## 2. Editing your research group
 
-1. Go to: **https://microbiology-sils.nl/admin**
-2. Click **"Login with GitHub"**
-3. Authorize the app when prompted
+### Find your group
+Click **Research Groups** in the left sidebar, then click your group's name in the list.
 
-![Screenshot: CMS login page]
-<!-- TODO: Add screenshot of login page with "Login with GitHub" button -->
+### The fields you'll edit
 
-![Screenshot: CMS dashboard after login]
-<!-- TODO: Add screenshot of the CMS dashboard showing the sidebar -->
+Most of what visitors see is in the **main column** of the form:
 
----
-
-## 3. Editing Your Research Group
-
-### Step 1: Find Your Group
-
-Click **"Research Groups"** in the sidebar, then select your group.
-
-![Screenshot: Research Groups list in sidebar]
-<!-- TODO: Add screenshot showing the Research Groups collection in sidebar -->
-
-### Step 2: Edit Your Content
-
-Fill in the form fields:
-
-| Field | What to Write |
+| Field | What to write |
 |-------|---------------|
-| **Short Description** | 1-2 sentences for the card view |
-| **Full Description** | Main paragraph about your research |
-| **What We Do** | Your research focus and questions |
-| **How We Do It** | Methods and techniques you use |
+| **Name** | Your group's display name |
+| **Short description** | 1–2 sentences — shown on the overview card |
+| **Description** | The intro paragraph at the top of your page |
+| **What we do** | Your research focus and questions (leave a **blank line** between paragraphs) |
+| **How we do it — experimental** | Your experimental approaches |
+| **How we do it — computational** | Your data-driven / computational work |
+| **Lab culture** | Optional — what it's like to work in your group |
+| **Research focus** | Short bullet phrases — click **Add** for each one |
+| **Keywords** | Individual keywords — click **Add** for each one |
 
-![Screenshot: Research group editing form]
-<!-- TODO: Add screenshot of the editing form with fields visible -->
+On the **right-hand sidebar** are the smaller details:
 
-### Step 3: Save and Publish
+| Field | Notes |
+|-------|-------|
+| **Research area** | Pick from the dropdown (controls which section your group appears in) |
+| **Principal investigator**, **Role** | Your name and title |
+| **Contact email**, **Lab website URL** | Shown as buttons on your page |
+| **Slug** | The page's web address. **Don't change this** — it would break your page's link. |
 
-- **Save** = Draft (not visible on website)
-- **Publish** = Live on website (updates in ~2 minutes)
-
-![Screenshot: Save and Publish buttons]
-<!-- TODO: Add screenshot highlighting the Save/Publish buttons at top -->
-
----
-
-## 4. Adding Team Members
-
-1. Scroll to **"Team Members"** section
-2. Click **"Add Team Members"**
-3. Fill in: Name, Role, Email, Photo, Bio
-4. Click **"Publish"**
-
-![Screenshot: Team Members section with Add button]
-<!-- TODO: Add screenshot of Team Members section -->
-
-![Screenshot: Team member form with photo upload]
-<!-- TODO: Add screenshot showing the team member entry form -->
-
-### Photo Tips
-- Use square photos (400x400 pixels ideal)
-- JPG or PNG format
-- Keep under 5MB
+### Save
+Click **Save** (top-right). Wait a moment, refresh your page, and the change is there.
 
 ---
 
-## 5. Adding Publications
+## 3. Adding team members (with photos)
 
-1. Scroll to **"Publications"** section
-2. Click **"Add Publications"**
-3. Enter: Title, Authors, Journal, Year, Link
-4. Click **"Publish"**
+1. On your group's page, scroll to **Team members**.
+2. Click **Add Team member**.
+3. Fill in **Name**, **Role**, **Email** (optional), **Bio** (optional).
+4. For **Photo**, click the upload area → **Upload new** → choose a file from your computer.
+5. Click **Save**.
 
-![Screenshot: Publications section]
-<!-- TODO: Add screenshot of Publications section -->
+To reorder people, drag the handle on the left of each entry. To remove someone, use the
+row's menu (⋯) → **Remove**.
 
----
-
-## 6. Posting News
-
-1. Click **"News"** in the sidebar
-2. Click **"New News"**
-3. Fill in the form:
-   - Title and Date
-   - Tag (Publication, Award, Event, etc.)
-   - Description
-   - Toggle **"Show in Rotator"** for homepage
-4. Click **"Publish"**
-
-![Screenshot: News creation form]
-<!-- TODO: Add screenshot of news editing form -->
+**Photo tips:** square images look best (roughly 400×400 px or larger), JPG or PNG,
+ideally under ~5 MB.
 
 ---
 
-## 7. Quick Reference
+## 4. Adding publications
 
-| Task | How To |
+1. Scroll to **Publications** → **Add Publication**.
+2. Enter **Title**, **Authors**, **Journal**, **Year**, and an optional **Link** (DOI/URL).
+3. Click **Save**.
+
+They appear under "Selected publications" in the order listed (drag to reorder).
+
+---
+
+## 5. Posting news
+
+1. Click **News** in the sidebar → **Create New**.
+2. Fill in:
+   - **Title** and **Description** (a short summary)
+   - **Date** (sidebar) and an optional **Tag** (e.g. Publication, Award, Event)
+   - **Image** (optional) — upload the same way as a team photo
+   - **Featured** (sidebar) — tick this to highlight the item at the top of the News page
+3. Click **Save**. It appears on the **News** page right away.
+
+---
+
+## 6. Quick reference
+
+| Task | How to |
 |------|--------|
-| Login | Go to `/admin` → Login with GitHub |
-| Edit group | Research Groups → Your group → Edit → Publish |
-| Add team member | Edit group → Team Members → Add → Publish |
-| Add news | News → New News → Fill form → Publish |
-| Save draft | Click "Save" instead of "Publish" |
+| Log in | Go to `/admin` → email + password |
+| Edit your group | Research Groups → your group → edit → **Save** |
+| Add a team member | Your group → Team members → **Add** → upload photo → **Save** |
+| Add a publication | Your group → Publications → **Add** → **Save** |
+| Post news | News → **Create New** → fill in → **Save** |
+| Change your password | Top-right menu → **Account** |
 
 ---
 
-## 8. Troubleshooting
+## 7. Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| Changes not appearing | Wait 2-3 minutes, then refresh |
-| Can't publish | Check all required fields (*) are filled |
-| Login not working | Try logging out and back in |
-| Made a mistake | Contact Gaurav to restore previous version |
-
----
-
-## Need Help?
-
-Contact **Gaurav Dugar** (G.Dugar@uva.nl)
-
-Include:
-- Your GitHub username
-- What you were trying to do
-- Screenshot of any error
+| Problem | What to do |
+|---------|-----------|
+| Change didn't appear | Refresh the page (Ctrl/Cmd+R). It should be instant. |
+| Can't save | A required field (marked **\***) is empty — fill it in. |
+| Uploaded photo looks stretched | Use a square-ish image and re-upload. |
+| Forgot password | Email Gaurav to reset it. |
+| Made a mistake / want it back | Email Gaurav — earlier versions can be restored. |
 
 ---
 
-*Last updated: January 2026*
+## Need help?
+
+Contact **Gaurav Dugar** — **G.Dugar@uva.nl**. Include what you were trying to do and a
+screenshot of anything that looked wrong.
+
+---
+
+*Updated July 2026 · Microbiology theme, SILS · University of Amsterdam*
