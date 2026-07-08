@@ -1,20 +1,23 @@
 // app/people/page.tsx
-import { researchGroups } from "@/data/researchGroups";
+import { getAllResearchGroups } from "@/lib/payload-data";
 import ScrollReveal from "../components/ScrollReveal";
 
-export default function PeoplePage() {
-  const groups = researchGroups as any[];
+// Rendered on demand so edits made in /admin appear immediately.
+export const dynamic = "force-dynamic";
 
-  // Collect PIs from groups
+export default async function PeoplePage() {
+  const groups = await getAllResearchGroups();
+
+  // Collect PIs from the CMS research groups
   const pis = groups
-    .filter((g: any) => g.pi)
-    .map((g: any) => ({
-      name: g.pi,
+    .filter((g) => g.pi)
+    .map((g) => ({
+      name: g.pi as string,
       group: g.name,
       role: g.role || "Principal Investigator",
       email: g.contactEmail,
     }))
-    // optional: sort alphabetically by name
+    // sort alphabetically by name
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (

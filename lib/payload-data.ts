@@ -18,6 +18,25 @@ export interface NewsItemData {
   featured?: boolean
 }
 
+export interface SeminarData {
+  title: string
+  speaker: string
+  affiliation?: string
+  date: string
+  location?: string
+  description?: string
+  link?: string
+}
+
+export interface PublicationData {
+  title: string
+  authors?: string
+  journal?: string
+  year?: number
+  link?: string
+  group?: string
+}
+
 function mediaUrl(value: unknown): string | undefined {
   if (!value) return undefined
   if (typeof value === 'string') return value
@@ -110,4 +129,43 @@ export async function getAllNews(): Promise<NewsItemData[]> {
     image: mediaUrl(d.image),
     featured: Boolean(d.featured),
   }))
+}
+
+export async function getAllSeminars(): Promise<SeminarData[]> {
+  const payload = await client()
+  const res = await payload.find({
+    collection: 'seminars',
+    depth: 0,
+    limit: 200,
+    sort: 'date',
+  })
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  return res.docs.map((s: any) => ({
+    title: s.title,
+    speaker: s.speaker,
+    affiliation: s.affiliation ?? undefined,
+    date: s.date,
+    location: s.location ?? undefined,
+    description: s.description ?? undefined,
+    link: s.link ?? undefined,
+  }))
+}
+
+// Aggregate every research group's publications into one list (newest first).
+export async function getAllPublications(): Promise<PublicationData[]> {
+  const groups = await getAllResearchGroups()
+  const pubs: PublicationData[] = []
+  for (const g of groups) {
+    for (const p of g.publications ?? []) {
+      pubs.push({
+        title: p.title,
+        authors: p.authors,
+        journal: p.journal,
+        year: p.year,
+        link: p.link,
+        group: g.name,
+      })
+    }
+  }
+  return pubs.sort((a, b) => (b.year ?? 0) - (a.year ?? 0))
 }

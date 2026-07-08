@@ -10,6 +10,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { ResearchGroups } from './collections/ResearchGroups'
 import { News } from './collections/News'
+import { Seminars } from './collections/Seminars'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,9 +21,10 @@ const dirname = path.dirname(filename)
 const db = process.env.DATABASE_URI
   ? postgresAdapter({
       pool: { connectionString: process.env.DATABASE_URI },
-      // Auto-sync the schema on connect (like SQLite does locally), so the
-      // first production deploy creates the tables with no migration step.
-      // Trade-off: for future schema changes, consider Payload migrations.
+      // NOTE: schema "push" is hard-disabled when NODE_ENV==='production', so
+      // this only auto-syncs the schema in a non-prod (local) run. The Neon
+      // schema is therefore created/updated by running the app locally against
+      // DATABASE_URI (dev mode). Production only reads/writes rows, never DDL.
       push: true,
     })
   : sqliteAdapter({
@@ -38,7 +40,7 @@ export default buildConfig({
       titleSuffix: '— Microbiology CMS',
     },
   },
-  collections: [Users, Media, ResearchGroups, News],
+  collections: [Users, Media, ResearchGroups, News, Seminars],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   db,

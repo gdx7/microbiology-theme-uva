@@ -1,42 +1,11 @@
 // app/seminars/page.tsx
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import { getAllSeminars } from "@/lib/payload-data";
 
-interface Seminar {
-  title: string;
-  date: string;
-  time?: string;
-  speaker: string;
-  affiliation?: string;
-  location?: string;
-  description?: string;
-  link?: string;
-}
+// Rendered on demand so edits made in /admin appear immediately.
+export const dynamic = "force-dynamic";
 
-function getSeminars(): Seminar[] {
-  const seminarsDirectory = path.join(process.cwd(), 'content/seminars');
-
-  if (!fs.existsSync(seminarsDirectory)) {
-    return [];
-  }
-
-  const fileNames = fs.readdirSync(seminarsDirectory);
-  const seminars = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
-      const fullPath = path.join(seminarsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data } = matter(fileContents);
-      return data as Seminar;
-    })
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-
-  return seminars;
-}
-
-export default function SeminarsPage() {
-  const seminars = getSeminars();
+export default async function SeminarsPage() {
+  const seminars = await getAllSeminars();
   const now = new Date();
   const upcoming = seminars.filter(s => new Date(s.date) >= now);
   const past = seminars.filter(s => new Date(s.date) < now).reverse();
@@ -60,13 +29,14 @@ export default function SeminarsPage() {
                   {seminar.affiliation && ` (${seminar.affiliation})`}
                 </p>
                 <p style={{ marginTop: "0.3rem", fontSize: "0.9rem", color: "#64748b" }}>
-                  <strong>Date:</strong> {new Date(seminar.date).toLocaleDateString('en-US', {
+                  <strong>Date:</strong> {new Date(seminar.date).toLocaleString('en-US', {
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
-                    day: 'numeric'
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit',
                   })}
-                  {seminar.time && ` at ${seminar.time}`}
                 </p>
                 {seminar.location && (
                   <p style={{ marginTop: "0.3rem", fontSize: "0.9rem", color: "#64748b" }}>
