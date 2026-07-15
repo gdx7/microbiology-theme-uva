@@ -13,18 +13,22 @@ export const dynamic = "force-dynamic";
 
 const SECTIONS: { key: PersonCategory; title: string }[] = [
   { key: "leaders", title: "Group Leaders" },
+  { key: "staff", title: "Staff" },
   { key: "postdocs", title: "Postdocs" },
   { key: "phd", title: "PhD Students" },
-  { key: "staff", title: "Staff" },
+  { key: "interns", title: "Interns" },
 ];
 
-// Strip academic titles so "Dr. Gaurav Dugar" and "Gaurav Dugar" merge.
+// Strip academic titles AND middle initials so e.g.
+// "Prof. Dr. Leendert W. Hamoen" and "Leendert Hamoen" merge into one person.
 function normalizeName(name: string): string {
   return name
     .toLowerCase()
-    .replace(/\b(dr|prof|ir|mr|mrs|ms|msc|bsc|phd)\b\.?/g, "")
     .replace(/[.,]/g, "")
-    .replace(/\s+/g, " ")
+    .split(/\s+/)
+    .filter((t) => !["dr", "prof", "ir", "mr", "mrs", "ms", "msc", "bsc", "phd"].includes(t))
+    .filter((t) => t.length > 1) // drop middle initials like "w"
+    .join(" ")
     .trim();
 }
 

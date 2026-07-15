@@ -42,9 +42,10 @@ export const People: CollectionConfig = {
       admin: { position: 'sidebar', description: 'Which section of the People page this person appears in.' },
       options: [
         { label: 'Group leader', value: 'leaders' },
+        { label: 'Staff', value: 'staff' },
         { label: 'Postdoc', value: 'postdocs' },
         { label: 'PhD student', value: 'phd' },
-        { label: 'Staff', value: 'staff' },
+        { label: 'Intern (Bachelor / Master student)', value: 'interns' },
       ],
     },
     { name: 'email', type: 'text', admin: { position: 'sidebar' } },

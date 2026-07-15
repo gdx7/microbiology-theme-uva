@@ -64,7 +64,7 @@ export const POSITION_TYPE_LABELS: Record<string, string> = {
   other: 'Other',
 }
 
-export type PersonCategory = 'leaders' | 'postdocs' | 'phd' | 'staff'
+export type PersonCategory = 'leaders' | 'staff' | 'postdocs' | 'phd' | 'interns'
 
 export interface PersonData {
   name: string
@@ -82,7 +82,9 @@ export function categorizeRole(role?: string): PersonCategory {
   const r = (role || '').toLowerCase()
   if (/group leader|chair|principal investigator|\bp\.?i\.?\b|professor|\bprof\b/.test(r)) return 'leaders'
   if (/postdoc|post-doc|postdoctoral/.test(r)) return 'postdocs'
-  if (/phd|ph\.d|doctoral|candidate|\bstudent\b/.test(r)) return 'phd'
+  // PhD signals take priority over the generic "student" (interns) bucket.
+  if (/phd|ph\.d|doctoral|\bcandidate\b/.test(r)) return 'phd'
+  if (/intern|\bmaster\b|\bbachelor\b|\bmsc\b|\bbsc\b|\bstudent\b/.test(r)) return 'interns'
   return 'staff'
 }
 
