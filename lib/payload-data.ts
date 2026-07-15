@@ -64,6 +64,28 @@ export const POSITION_TYPE_LABELS: Record<string, string> = {
   other: 'Other',
 }
 
+export type PersonCategory = 'leaders' | 'postdocs' | 'phd' | 'staff'
+
+export interface PersonData {
+  name: string
+  role?: string
+  category: PersonCategory
+  group?: string
+  email?: string
+  photo?: string
+  bio?: string
+  order?: number
+}
+
+// Map a free-text role (from a group's team members) into a People-page section.
+export function categorizeRole(role?: string): PersonCategory {
+  const r = (role || '').toLowerCase()
+  if (/group leader|chair|principal investigator|\bp\.?i\.?\b|professor|\bprof\b/.test(r)) return 'leaders'
+  if (/postdoc|post-doc|postdoctoral/.test(r)) return 'postdocs'
+  if (/phd|ph\.d|doctoral|candidate|\bstudent\b/.test(r)) return 'phd'
+  return 'staff'
+}
+
 function mediaUrl(value: unknown): string | undefined {
   if (!value) return undefined
   if (typeof value === 'string') return value
@@ -196,6 +218,27 @@ export async function getAllVacancies(): Promise<VacancyData[]> {
     deadline: v.deadline ?? undefined,
     applyLink: v.applyLink ?? undefined,
     contactEmail: v.contactEmail ?? undefined,
+  }))
+}
+
+export async function getAllPeople(): Promise<PersonData[]> {
+  const payload = await client()
+  const res = await payload.find({
+    collection: 'people',
+    depth: 1,
+    limit: 500,
+    sort: 'name',
+  })
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  return res.docs.map((p: any) => ({
+    name: p.name,
+    role: p.role ?? undefined,
+    category: (p.category ?? 'staff') as PersonCategory,
+    group: p.group ?? undefined,
+    email: p.email ?? undefined,
+    photo: mediaUrl(p.photo),
+    bio: p.bio ?? undefined,
+    order: typeof p.order === 'number' ? p.order : undefined,
   }))
 }
 
